@@ -7,15 +7,15 @@
     <description>Numetrics
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Sat, 13 Nov 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 14 Nov 2021 00:00:00 +0000</lastBuildDate>
     <item>
       <title>nlmixr: Docked and loaded</title>
       <dc:creator>Justin Wilkins</dc:creator>
-      <link>https://numetric.ai/posts/2021-11-11-nlmixr-docked-and-loaded</link>
+      <link>https://numetric.ai/posts/2021-11-14-nlmixr-docked-and-loaded</link>
       <description>How to get started quickly with nlmixr, leveraging Docker.</description>
-      <guid>https://numetric.ai/posts/2021-11-11-nlmixr-docked-and-loaded</guid>
-      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
-      <media:content url="https://numetric.ai/posts/2021-11-11-nlmixr-docked-and-loaded/../../assets/docker.png" medium="image" type="image/png" width="1607" height="1080"/>
+      <guid>https://numetric.ai/posts/2021-11-14-nlmixr-docked-and-loaded</guid>
+      <pubDate>Sun, 14 Nov 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://numetric.ai/posts/2021-11-14-nlmixr-docked-and-loaded/../../assets/docker.png" medium="image" type="image/png" width="1607" height="1080"/>
     </item>
     <item>
       <title>Welcome to Numetrics</title>
