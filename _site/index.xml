@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>Numetrics</title>
+    <link>https://numetric.ai</link>
+    <atom:link href="https://numetric.ai/index.xml" rel="self" type="application/rss+xml"/>
+    <description>Numetrics
+</description>
+    <generator>Distill</generator>
+    <lastBuildDate>Thu, 11 Nov 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>nlmixr: Docked and loaded</title>
+      <dc:creator>Justin Wilkins</dc:creator>
+      <link>https://numetric.ai/posts/2021-11-11-nlmixr-docked-and-loaded</link>
+      <description>How to get started quickly with nlmixr, leveraging Docker.</description>
+      <guid>https://numetric.ai/posts/2021-11-11-nlmixr-docked-and-loaded</guid>
+      <pubDate>Thu, 11 Nov 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://numetric.ai/posts/2021-11-11-nlmixr-docked-and-loaded/../../assets/docker.png" medium="image" type="image/png" width="1607" height="1080"/>
+    </item>
+    <item>
+      <title>Welcome to Numetrics</title>
+      <dc:creator>Justin Wilkins</dc:creator>
+      <link>https://numetric.ai/posts/welcome</link>
+      <description>Welcome to Numetrics, the blog for R, pharmacometrics, and parts in between.</description>
+      <guid>https://numetric.ai/posts/welcome</guid>
+      <pubDate>Thu, 23 Sep 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://numetric.ai/posts/welcome/../../assets/werl.jpg" medium="image" type="image/jpeg"/>
+    </item>
+  </channel>
+</rss>

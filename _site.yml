@@ -1,0 +1,32 @@
+name: "Numetrics"
+title: "Numetrics"
+description: |
+  Numetrics
+output_dir: "_site"
+base_url: https://numetric.ai
+repository_url: https://github.com/kestrel99/numetric.ai/
+#google_analytics: "UA-52682113-1"
+#theme: theme.css
+navbar:
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "Numetric GmbH"
+      href: numetric.html
+    - text: "About"
+      href: about.html
+    - icon: fa fa-github
+      href: https://github.com/kestrel99
+    - icon: fa fa-twitter
+      href: https://twitter.com/justinwilkins
+collections:
+  posts:
+    share: [twitter, facebook, linkedin]
+    # disqus: data-justinwilkins
+
+output:
+  distill::distill_article:
+    css: styles.css
+    toc_depth: 2
+
+# design shamelessly adapted from Notes From A Spreadsheet, https://www.mrworthington.com/

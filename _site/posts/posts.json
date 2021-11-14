@@ -1,0 +1,38 @@
+[
+  {
+    "path": "posts/2021-11-11-nlmixr-docked-and-loaded/",
+    "title": "nlmixr: Docked and loaded",
+    "description": "How to get started quickly with nlmixr, leveraging Docker.",
+    "author": [
+      {
+        "name": "Justin Wilkins",
+        "url": "https://www.occams.com"
+      }
+    ],
+    "date": "2021-11-11",
+    "categories": [],
+    "contents": "\r\nA short introduction\r\nnlmixr [1] is a free-as-in-beer and open-source tool for fitting nonlinear mixed-effect models in R. It’s built on the really quite brilliant RxODE simulation package [2], and has no external dependencies that need licensing. It currently contains stable parameter estimation algorithms based on stochastic approximation-estimation maximization (SAEM) [3], first-order conditional estimation with and without interaction (FOCEi and FOCE) as found in NONMEM, and the venerable nlme package developed by Pinheiro and Bates [4]. It’s a free tool for fitting ODE-based models - you know, the kinds of models that are heavily used in pharmacometrics and econometrics, and that until now have needed software that costs US$100,000 a year to run.\r\nIt’s really pretty awesome, all in all.\r\nInstalling it, though, has historically been a bit of a bear. It’s easier now, since we’ve managed to get rid of its dependency on Python, but it still has a web of specific R packages it needs, and sometimes the versions of those packages is important.\r\nWouldn’t it be great if we could just bundle the whole thing up in a sealed bottle that we could easily install without needing to care about those dozens of overlapping, complex interdependencies? Yes. Yes it would. And that’s where Docker comes in.\r\nWikipedia describes Docker as a set of “platform as a service” (PaaS) products that use OS-level virtualization to deliver software in packages called containers, which are isolated from one another and bundle their own software, libraries and configuration files. In simple language, Docker provides sealed bottles that we can easily install without needing to care about dozens of overlapping, complex interdependencies.\r\nGetting started with Docker\r\nOccams is a Windows shop, and so we’ll be focusing on getting everything up and running on Windows (11 Pro, in this case). This is pretty easy, assuming you have admin rights - just download and install Docker Desktop based on the comprehensive guide Docker provides. (It can be somewhat fiddly, since virtualization needs to be turned on in your computer’s BIOS, and Windows’ Virtual Machine Platform and Windows Subsystem for Linux need to be installed - but this is straightforward.) Once you have Docker up and running, you may want to create a user account on Docker and log in, but this isn’t required.\r\n\r\n\r\n\r\nSo today we’re going to use the nlmixr Docker image at Docker Hub. The first thing you’ll need to do is open a Windows terminal window and enter the following:\r\n\r\ndocker pull kestrel99/nlmixr\r\n\r\nAfter a few moments, depending on the speed of your Internet connection, the process will complete.\r\n\r\n\r\n\r\n\r\n\r\n\r\n[1] Fidler M, Wilkins JJ, Hooijmaijers R, Post TM, Schoemaker R, Trame MN, et al. Nonlinear Mixed‐Effects Model Development and Simulation Using nlmixr and Related R Open‐Source Packages. CPT: Pharmacometrics & Systems Pharmacology 2019:psp4.12445. https://doi.org/10.1002/psp4.12445.\r\n\r\n\r\n[2] Wang W, Hallow KM, James DA. A tutorial on RxODE: Simulating differential equation pharmacometric models in R. CPT: Pharmacometrics and Systems Pharmacology 2016;5:3–10. https://doi.org/10.1002/psp4.12052.\r\n\r\n\r\n[3] Delyon BYB, Lavielle M, Moulines E. Convergence of a stochastic approximation version of the EM algorithm. Annals of Statistics 1999;27:94–128. https://doi.org/doi:10.1214/aos/1018031103.\r\n\r\n\r\n[4] Pinheiro J, Bates D. Mixed-Effects Models in S and S-PLUS. New York: Springer-Verlag; 2000. https://doi.org/10.1007/b98882.\r\n\r\n\r\n\r\n\r\n",
+    "preview": "posts/2021-11-11-nlmixr-docked-and-loaded/../../assets/docker.png",
+    "last_modified": "2021-11-12T17:11:19+01:00",
+    "input_file": {},
+    "preview_width": 1607,
+    "preview_height": 1080
+  },
+  {
+    "path": "posts/welcome/",
+    "title": "Welcome to Numetrics",
+    "description": "Welcome to Numetrics, the blog for R, pharmacometrics, and parts in between.",
+    "author": [
+      {
+        "name": "Justin Wilkins",
+        "url": "https://www.occams.com"
+      }
+    ],
+    "date": "2021-09-23",
+    "categories": [],
+    "contents": "\r\n\r\n\r\n\r\nHello, and welcome to Numetrics.\r\nThis is going to be a blog of sorts, and it’s going to be focused (mostly) on some of the techier corners of pharmacometrics. What exactly? I don’t know. I’m on the development team of nlmixr, so you’re going to be hearing about that, I expect, and it’s a fair bet there’s going to be quite a bit of R, and perhaps some NONMEM if you’re really unlucky. I’m a fan of reproducibility, literate programming, ways to present data, and doing things more efficiently. So, a bit of tech, and a bit of gloss. Possibly a bit about pharmacometrics in general.\r\nPosts are going to be irregular. As I write this, we’re still neck deep in the global COVID-19 pandemic, and I’m a consultant, so I’m pretty much permanently slammed. But hey, stay tuned!\r\n(In case you were wondering, the picture is an aerial view of the teeming metropolis of Werl, Germany, home since January 2019. It’s an old Hanseatic League city with a charming Wallfahrtsbasilika, which was and still is popular with pilgrims, and a stop on the Hellweg. We like it.)\r\n\r\n\r\n\r\n",
+    "preview": "posts/welcome/../../assets/werl.jpg",
+    "last_modified": "2021-11-10T09:20:29+01:00",
+    "input_file": {}
+  }
+]
