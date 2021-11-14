@@ -93,8 +93,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <link rel="canonical" href="https://numetric.ai/posts/2021-11-11-nlmixr-docked-and-loaded/"/>
 
 <!--  https://schema.org/Article -->
-<meta property="article:published" itemprop="datePublished" content="2021-11-11"/>
-<meta property="article:created" itemprop="dateCreated" content="2021-11-11"/>
+<meta property="article:published" itemprop="datePublished" content="2021-11-14"/>
+<meta property="article:created" itemprop="dateCreated" content="2021-11-14"/>
 <meta name="article:author" content="Justin Wilkins"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
@@ -120,8 +120,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--  https://scholar.google.com/intl/en/scholar/inclusion.html#indexing -->
 <meta name="citation_title" content="Numetrics: nlmixr: Docked and loaded"/>
 <meta name="citation_fulltext_html_url" content="https://numetric.ai/posts/2021-11-11-nlmixr-docked-and-loaded/"/>
-<meta name="citation_online_date" content="2021/11/11"/>
-<meta name="citation_publication_date" content="2021/11/11"/>
+<meta name="citation_online_date" content="2021/11/14"/>
+<meta name="citation_publication_date" content="2021/11/14"/>
 <meta name="citation_author" content="Justin Wilkins"/>
 <!--/radix_placeholder_meta_tags-->
   
@@ -132,7 +132,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","bibliography","csl","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["nlmixr: Docked and loaded"]},{"type":"character","attributes":{},"value":["How to get started quickly with nlmixr, leveraging Docker."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Justin Wilkins"]},{"type":"character","attributes":{},"value":["https://www.occams.com"]}]}]},{"type":"character","attributes":{},"value":["11-11-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["biblio.bib"]},{"type":"character","attributes":{},"value":["elsevier-vancouver.csl"]},{"type":"character","attributes":{},"value":["https://numetric.ai/posts/2021-11-11-nlmixr-docked-and-loaded/"]},{"type":"character","attributes":{},"value":["https://numetric.ai/posts/2021-11-11-nlmixr-docked-and-loaded/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","bibliography","csl","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["nlmixr: Docked and loaded"]},{"type":"character","attributes":{},"value":["How to get started quickly with nlmixr, leveraging Docker."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Justin Wilkins"]},{"type":"character","attributes":{},"value":["https://www.occams.com"]}]}]},{"type":"character","attributes":{},"value":["11-14-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["biblio.bib"]},{"type":"character","attributes":{},"value":["elsevier-vancouver.csl"]},{"type":"character","attributes":{},"value":["https://numetric.ai/posts/2021-11-11-nlmixr-docked-and-loaded/"]},{"type":"character","attributes":{},"value":["https://numetric.ai/posts/2021-11-11-nlmixr-docked-and-loaded/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -2331,7 +2331,7 @@ body {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"nlmixr: Docked and loaded","description":"How to get started quickly with nlmixr, leveraging Docker.","authors":[{"author":"Justin Wilkins","authorURL":"https://www.occams.com","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-11-11T00:00:00.000+01:00","citationText":"Wilkins, 2021"}
+{"title":"nlmixr: Docked and loaded","description":"How to get started quickly with nlmixr, leveraging Docker.","authors":[{"author":"Justin Wilkins","authorURL":"https://www.occams.com","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-11-14T00:00:00.000+01:00","citationText":"Wilkins, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2370,7 +2370,7 @@ body {
 <div class="d-byline">
   Justin Wilkins <a href="https://www.occams.com" class="uri">https://www.occams.com</a> 
   
-<br/>11-11-2021
+<br/>11-14-2021
 </div>
 
 <div class="d-article">
@@ -2385,7 +2385,9 @@ body {
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="../../assets/docker.png" width="100%" style="display: block; margin: auto;" /></p>
 </div>
-<p>So today we’re going to use the <a href="https://hub.docker.com/r/kestrel99/nlmixr">nlmixr Docker image</a> at Docker Hub. The first thing you’ll need to do is open a Windows terminal window and enter the following:</p>
+<h2 id="getting-the-nlmixr-container-up-and-running">Getting the nlmixr container up and running</h2>
+<p>So today we’re going to use the <a href="https://hub.docker.com/r/kestrel99/nlmixr">nlmixr Docker image</a> at Docker Hub. It’s built on the <a href="https://hub.docker.com/r/rocker/verse">“verse”</a> version of <a href="https://rocker.org">rocker.org</a>’s excellent series of R containers, and includes <a href="https://www.rstudio.com/products/rstudio/#rstudio-server">RStudio Server</a>, the <a href="https://www.tidyverse.org/">tidyverse</a> family of packages, <a href="https://shiny.rstudio.com/"><code>shiny</code></a>, a lot of publishing-related software including <a href="https://www.latex-project.org/">TeX</a>, and of course <a href="https://nlmixrdevelopment.github.io/nlmixr/"><code>nlmixr</code></a>, <a href="https://nlmixrdevelopment.github.io/RxODE/"><code>RxODE</code></a>, <a href="https://github.com/RichardHooijmaijers/shinyMixR"><code>shinyMixR</code></a> and <a href="https://github.com/nlmixrdevelopment/xpose.nlmixr"><code>xpose.nlmixr</code></a>.</p>
+<p>The first thing you’ll need to do is open a Windows terminal window and enter the following:</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> pull kestrel99/nlmixr</span></code></pre></div>
 </div>
@@ -2393,7 +2395,36 @@ body {
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="../../assets/docker_pull.png" width="100%" style="display: block; margin: auto;" /></p>
 </div>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<p>Looking back at our Docker Dashboard (you can find Docker Dashboard in the Windows taskbar, it’s the whale icon), we can see that the <code>nlmixr</code> image is now available.</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="../../assets/docker_images.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<p>Drop back to your terminal, and enter:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> container run <span class="at">--rm</span> <span class="at">-it</span> <span class="at">-e</span> PASSWORD=mypass <span class="at">-p</span> 8787:8787 <span class="at">-v</span> /c/MyProject:/home/rstudio/myproject kestrel99/nlmixr</span></code></pre></div>
+</div>
+<p>This will start the music: the Docker image will be loaded and you’ll be able to access the system thanks to the bundled RStudio instance, at <a href="http://localhost:8787" class="uri">http://localhost:8787</a>. The password will be <em>mypass</em>, but you can set this to anything you like at startup.</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="../../assets/login.png" width="50%" style="display: block; margin: auto;" /></p>
+</div>
+<p>Log in with username <code>rstudio</code> and the password you set up above. You’ll now see RStudio Server in all its glory. You have also mapped the Windows folder <strong>C:/MyProject</strong> to the <strong>myproject</strong> folder within the <code>nlmixr</code> Docker image, so you can have access to whatever you need from your local file system. This, as you might imagine, is quite handy, since Docker images are virtual machines and can’t otherwise see files that are located outside their bottle universes.</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="../../assets/rstudio.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<p>Have a look in the <em>Examples</em> folder to find <strong>examples.R</strong>. There you’ll find some code to confirm <code>nlmixr</code> is working as it should - run it all and you’ll see this:</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="../../assets/rstudio_nlmixr_test.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<p>And you’ve now got a fully-functional Dockerized <code>nlmixr</code> development environment running. No mess, no fuss.</p>
+<p>When you’re done working in the image, it can be shut down from Docker Desktop - navigate to <em>Containers/Apps</em>, and find the image you’re running - it’ll have a cool random name like <em>determined-mclaren</em> as in this example. The just click the stop button. In this example, we’re using the <code>--rm</code> option, which ensures the instance is deleted after it’s closed (the source image will be kept, but anything you’ve changed will be lost).</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="../../assets/docker_stop.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<h2 id="what-next">What next?</h2>
+<p>Well, the world’s your oyster. This short article gives you the tools you need to gets started; Docker has a wealth of options that can be tweaked. For example, you might want to be able to restart the instance you’re using at some later point. See the <a href="https://docs.docker.com/">Docker documentation</a> for more info.</p>
+<p>As for <code>nlmixr</code>, check out the <a href="https://nlmixrdevelopment.github.io/nlmixr/">project landing page</a> for some detailed examples! Remember that <code>nlmixr</code> is in constant development, and there may well be bugs. If (when) you find any, report them to the development team at the <a href="https://github.com/nlmixrdevelopment/nlmixr/issues">GitHub issues page</a> - you’ll usually get an answer back within 24 hours.</p>
+<p>If you’re not keen on a purely console-based approach, you could do worse than look at Richard Hooijmaaijers’ <a href="https://github.com/RichardHooijmaijers/shinyMixR"><code>shinyMixR</code></a> add-on, which provides a GUI and run manager of sort for <code>nlmixr</code>. It comes included!</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <div id="refs" class="references csl-bib-body" role="doc-bibliography">
 <div id="ref-Fidler2019" class="csl-entry" role="doc-biblioentry">
 <div class="csl-left-margin">[1] </div><div class="csl-right-inline">Fidler M, Wilkins JJ, Hooijmaijers R, Post TM, Schoemaker R, Trame MN, et al. <span class="nocase">Nonlinear Mixed‐Effects Model Development and Simulation Using nlmixr and Related R Open‐Source Packages</span>. CPT: Pharmacometrics &amp; Systems Pharmacology 2019:psp4.12445. <a href="https://doi.org/10.1002/psp4.12445">https://doi.org/10.1002/psp4.12445</a>.</div>
@@ -2442,7 +2473,7 @@ body {
   <p>If you see mistakes or want to suggest changes, please <a href="https://github.com/kestrel99/numetric.ai/issues/new">create an issue</a> on the source repository.</p>
   <h3 id="citation">Citation</h3>
   <p>For attribution, please cite this work as</p>
-  <pre class="citation-appendix short">Wilkins (2021, Nov. 11). Numetrics: nlmixr: Docked and loaded. Retrieved from https://numetric.ai/posts/2021-11-11-nlmixr-docked-and-loaded/</pre>
+  <pre class="citation-appendix short">Wilkins (2021, Nov. 14). Numetrics: nlmixr: Docked and loaded. Retrieved from https://numetric.ai/posts/2021-11-11-nlmixr-docked-and-loaded/</pre>
   <p>BibTeX citation</p>
   <pre class="citation-appendix long">@misc{wilkins2021nlmixr:,
   author = {Wilkins, Justin},

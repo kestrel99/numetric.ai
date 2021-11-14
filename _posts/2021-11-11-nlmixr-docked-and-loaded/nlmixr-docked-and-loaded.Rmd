@@ -5,7 +5,7 @@ description: |
 author:
   - name: Justin Wilkins
     url: https://www.occams.com
-date: 11-11-2021
+date: 11-14-2021
 output:
   distill::distill_article:
     self_contained: false
@@ -37,7 +37,11 @@ Occams is a Windows shop, and so we'll be focusing on getting everything up and 
 knitr::include_graphics("../../assets/docker.png")  
 ```
 
-So today we're going to use the [nlmixr Docker image](https://hub.docker.com/r/kestrel99/nlmixr) at Docker Hub. The first thing you'll need to do is open a Windows terminal window and enter the following:
+## Getting the nlmixr container up and running
+
+So today we're going to use the [nlmixr Docker image](https://hub.docker.com/r/kestrel99/nlmixr) at Docker Hub. It's built on the ["verse"](https://hub.docker.com/r/rocker/verse) version of [rocker.org](https://rocker.org)'s excellent series of R containers, and includes [RStudio Server](https://www.rstudio.com/products/rstudio/#rstudio-server), the [tidyverse](https://www.tidyverse.org/) family of packages, [`shiny`](https://shiny.rstudio.com/), a lot of publishing-related software including [TeX](https://www.latex-project.org/), and of course [`nlmixr`](https://nlmixrdevelopment.github.io/nlmixr/), [`RxODE`](https://nlmixrdevelopment.github.io/RxODE/), [`shinyMixR`](https://github.com/RichardHooijmaijers/shinyMixR) and [`xpose.nlmixr`](https://github.com/nlmixrdevelopment/xpose.nlmixr).   
+
+The first thing you'll need to do is open a Windows terminal window and enter the following:
 
 ```{bash, eval=F, echo=T}
 docker pull kestrel99/nlmixr
@@ -50,13 +54,49 @@ After a few moments, depending on the speed of your Internet connection, the pro
 knitr::include_graphics("../../assets/docker_pull.png")  
 ```
 
+Looking back at our Docker Dashboard (you can find Docker Dashboard in the Windows taskbar, it's the whale icon), we can see that the `nlmixr` image is now available.
 
+```{r, echo = FALSE, fig.align = 'center', out.width = '100%', results = 'markup'} 
+knitr::include_graphics("../../assets/docker_images.png")  
+```
 
+Drop back to your terminal, and enter: 
 
+```{bash, eval=F, echo=T}
+docker container run --rm -it -e PASSWORD=mypass -p 8787:8787 -v /c/MyProject:/home/rstudio/myproject kestrel99/nlmixr
+```
 
+This will start the music: the Docker image will be loaded and you'll be able to access the system thanks to the bundled RStudio instance, at http://localhost:8787. The password will be *mypass*, but you can set this to anything you like at startup. 
 
+```{r, echo = FALSE, fig.align = 'center', out.width = '50%', results = 'markup'} 
+knitr::include_graphics("../../assets/login.png")  
+```
 
+Log in with username `rstudio` and the password you set up above. You'll now see RStudio Server in all its glory. You have also mapped the Windows folder **C:/MyProject** to the **myproject** folder within the `nlmixr` Docker image, so you can have access to whatever you need from your local file system. This, as you might imagine, is quite handy, since Docker images are virtual machines and can't otherwise see files that are located outside their bottle universes.
 
+```{r, echo = FALSE, fig.align = 'center', out.width = '100%', results = 'markup'} 
+knitr::include_graphics("../../assets/rstudio.png")  
+```
 
+Have a look in the *Examples* folder to find **examples.R**. There you'll find some code to confirm `nlmixr` is working as it should - run it all and you'll see this: 
 
+```{r, echo = FALSE, fig.align = 'center', out.width = '100%', results = 'markup'} 
+knitr::include_graphics("../../assets/rstudio_nlmixr_test.png")  
+```
+
+And you've now got a fully-functional Dockerized `nlmixr` development environment running. No mess, no fuss. 
+
+When you're done working in the image, it can be shut down from Docker Desktop - navigate to *Containers/Apps*, and find the image you're running - it'll have a cool random name like *determined-mclaren* as in this example. The just click the stop button. In this example, we're using the `--rm` option, which ensures the instance is deleted after it's closed (the source image will be kept, but anything you've changed will be lost).
+
+```{r, echo = FALSE, fig.align = 'center', out.width = '100%', results = 'markup'} 
+knitr::include_graphics("../../assets/docker_stop.png")  
+```
+
+## What next?
+
+Well, the world's your oyster. This short article gives you the tools you need to gets started; Docker has a wealth of options that can be tweaked. For example, you might want to be able to restart the instance you're using at some later point. See the [Docker documentation](https://docs.docker.com/) for more info. 
+
+As for `nlmixr`, check out the [project landing page](https://nlmixrdevelopment.github.io/nlmixr/) for some detailed examples! Remember that `nlmixr` is in constant development, and there may well be bugs. If (when) you find any, report them to the development team at the [GitHub issues page](https://github.com/nlmixrdevelopment/nlmixr/issues) - you'll usually get an answer back within 24 hours. 
+
+If you're not keen on a purely console-based approach, you could do worse than look at Richard Hooijmaaijers' [`shinyMixR`](https://github.com/RichardHooijmaijers/shinyMixR) add-on, which provides a GUI and run manager of sort for `nlmixr`. It comes included! 
 
