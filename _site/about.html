@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
   <meta name="generator" content="distill" />
-  <link rel="alternate" type="application/rss+xml" href="https://numetric.ai/index.xml" />
 
   <style type="text/css">
   /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
@@ -87,26 +86,29 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>: Posts</title>
+  <title>: About this site</title>
 
+  <meta property="description" itemprop="description" content="This is primarily a blog for expressing my random thoughts, opinions, and the odd tutorial about R&#10;or pharmacometrics, but also serves as the de facto homepage for my company, Numetric GmbH, which is a member of Occams."/>
 
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content=": Posts"/>
+  <meta property="og:title" content=": About this site"/>
   <meta property="og:type" content="article"/>
+  <meta property="og:description" content="This is primarily a blog for expressing my random thoughts, opinions, and the odd tutorial about R&#10;or pharmacometrics, but also serves as the de facto homepage for my company, Numetric GmbH, which is a member of Occams."/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content=""/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content=": Posts"/>
+  <meta property="twitter:title" content=": About this site"/>
+  <meta property="twitter:description" content="This is primarily a blog for expressing my random thoughts, opinions, and the odd tutorial about R&#10;or pharmacometrics, but also serves as the de facto homepage for my company, Numetric GmbH, which is a member of Occams."/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site","listing"]}},"value":[{"type":"character","attributes":{},"value":["Posts"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"character","attributes":{},"value":["posts"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description"]}},"value":[{"type":"character","attributes":{},"value":["About this site"]},{"type":"character","attributes":{},"value":["This is primarily a blog for expressing my random thoughts, opinions, and the odd tutorial about R\nor pharmacometrics, but also serves as the de facto homepage for my company, Numetric GmbH, which is a member of Occams."]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2328,12 +2330,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 </head>
 
-<body class="layout-listing">
+<body>
 
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Posts","authors":[]}
+{"title":"About this site","description":"This is primarily a blog for expressing my random thoughts, opinions, and the odd tutorial about R\nor pharmacometrics, but also serves as the de facto homepage for my company, Numetric GmbH, which is a member of Occams.","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2364,218 +2366,24 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
-<!--radix_placeholder_article_listing-->
-
-
-<script type="application/javascript">
-
-function init_posts_list() {
-
-  function load_image(img) {
-    var src = $(img).attr('data-src');
-    if (src) {
-      $(img).attr('src', src);
-      $(img).load(function() {
-        img.removeAttribute('data-src');
-      });
-    }
-  }
-
-  function set_posts_visible(posts, visible) {
-    if (visible) {
-
-      // show bottom border by default
-      $(posts).removeClass('post-preview-last');
-
-      // apply limits if need be
-      var max_posts = 25;
-      var apply_limits = $('.posts-container').hasClass('posts-apply-limit');
-      if (apply_limits && posts.length > max_posts) {
-        posts = $(posts).slice(0, max_posts);
-      } else {
-        $('.posts-more a').addClass('hidden');
-      }
-
-      // apply last style
-      $(posts.slice(-1)[0]).addClass('post-preview-last');
-
-      $(posts).removeClass('hidden');
-      $(posts).find('img[data-src]').each(function(i, img) {
-        load_image(img);
-      });
-    } else {
-      $(posts).addClass('hidden');
-    }
-  }
-
-  function apply_hash_filter() {
-
-    // clear active state
-    $('.categories .active').removeClass('active');
-
-    // mark all posts invisible to start
-    set_posts_visible($('.posts-list').children('a'), false);
-
-    // if we have a hash filter
-    if (window.location.hash && window.location.hash.startsWith("#category:")) {
-
-      // mark posts that match the category visible
-      var page_category = window.location.hash.replace(/^#category:/, "");
-      var posts = $('.post-metadata').map(function(idx, script) {
-        var metadata = $.parseJSON($(script).html());
-        var post = null;
-        $.each(metadata.categories, function(idx, category) {
-          category = category.replace(/ /g,"_");
-          if ((page_category || '').toLowerCase() === "articles" || category === page_category) {
-            post = $(script).parent().get();
-            return false;
-          }
-        });
-        return post;
-      });
-      set_posts_visible(posts, true);
-
-      // mark the hash active
-      $('.categories li>a[href="' + window.location.hash + '"]').addClass('active');
-
-      // update the list_caption
-      var list_caption = $('.posts-list-caption');
-      var caption = (page_category || '').toLowerCase() === "articles"
-        ? list_caption.attr('data-caption')
-        : ('Category: ' + page_category.replace(/_/g," "));
-      list_caption.text(caption);
-
-    } else {
-
-      // no hash filter, make all posts visible (subject to max display)
-      set_posts_visible($('.posts-list').children(), true);
-
-      // reset list caption
-      var list_caption = $('.posts-list-caption');
-      list_caption.text(list_caption.attr('data-caption'));
-
-
-    }
-  }
-
-  // more articles
-  function apply_post_limits(apply) {
-    if (apply) {
-      $('.posts-container').addClass('posts-apply-limit');
-      $('.posts-more a').removeClass('hidden');
-    } else {
-      $('.posts-container').removeClass('posts-apply-limit');
-      $('.posts-more a').addClass('hidden');
-    }
-  }
-
-  // click handling for tags
-  $('.dt-tag').click(function(ev) {
-    window.location.hash = '#category:' + $(this).text().replace(/ /g, "_");
-    return false;
-  })
-
-  // hash filter handling
-  apply_hash_filter();
-  $(window).on('hashchange',function() {
-    apply_post_limits(true);
-    apply_hash_filter();
-  });
-
-  // more articles link
-  $('.posts-more a').click(function(e) {
-    e.preventDefault();
-    apply_post_limits(false);
-    apply_hash_filter();
-    return false;
-  });
-
-}
-
-</script>
-
-
-
-<div class="posts-container posts-with-sidebar posts-apply-limit l-screen-inset">
-<div class="posts-list">
-<h1 class="posts-list-caption" data-caption="Posts">Posts</h1>
-<a href="posts/2021-11-14-nlmixr-docked-and-loaded/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["R","Docker","nlmixr"]}</script>
-<div class="metadata">
-<div class="publishedDate">Nov. 14, 2021</div>
-<div class="dt-authors">
-<div class="dt-author">Justin Wilkins</div>
-</div>
-</div>
-<div class="thumbnail">
-<img src="assets/docker.png"/>
-</div>
-<div class="description">
-<h2>nlmixr: Docked and loaded</h2>
-<div class="dt-tags">
-<div class="dt-tag">R</div>
-<div class="dt-tag">Docker</div>
-<div class="dt-tag">nlmixr</div>
-</div>
-<p>How to get started quickly with nlmixr, leveraging Docker.</p>
-</div>
-</a>
-<a href="posts/welcome/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">Sept. 23, 2021</div>
-<div class="dt-authors">
-<div class="dt-author">Justin Wilkins</div>
-</div>
-</div>
-<div class="thumbnail">
-<img src="assets/werl.jpg"/>
-</div>
-<div class="description">
-<h2>Welcome to Numetrics</h2>
-<div class="dt-tags"></div>
-<p>Welcome to Numetrics, the blog for R, pharmacometrics, and parts in between.</p>
-</div>
-</a>
-</div>
-<div class="posts-sidebar">
-<div class="sidebar-section categories">
-<h3>Categories</h3>
-<ul>
-<li>
-<a href="#category:Articles">Articles</a>
-<span class="category-count">(2)</span>
-</li>
-<li>
-<a href="#category:Docker">Docker</a>
-<span class="category-count">(1)</span>
-</li>
-<li>
-<a href="#category:nlmixr">nlmixr</a>
-<span class="category-count">(1)</span>
-</li>
-<li>
-<a href="#category:R">R</a>
-<span class="category-count">(1)</span>
-</li>
-</ul>
-</div>
-</div>
-<div class="posts-more">
-<a href="#">More articles &raquo;</a>
-</div>
-</div>
-<!--/radix_placeholder_article_listing-->
 
 <div class="d-title">
-<h1>Posts</h1>
+<h1>About this site</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-
+<p><p>This is primarily a blog for expressing my random thoughts, opinions, and the odd tutorial about R or pharmacometrics, but also serves as the de facto homepage for my company, Numetric GmbH, which is a member of Occams.</p></p>
 </div>
 
 
 <div class="d-article">
+<h2 id="a-bit-about-me">A bit about me</h2>
+<p>I’m from Cape Town, one of the world’s sunnier places, and I have a PhD in pharmacology (my thesis was on the population pharmacokinetics of rifampicin, isoniazid, and pyrazinamide, key drugs in the treatment of tuberculosis) from the <a href="https://www.uct.ac.za">University of Cape Town</a> - I also collected a BSc in microbiology and biochemistry, and an MSc in the pharmacoeconomics of malaria while I was there (as you do).</p>
+<p>Since then, I’ve moved around a bit. I joined <a href="https://www.uu.se">Uppsala University</a> as a postdoctoral researcher in 2004, where I had the good fortune to work in the storied Department of Pharmaceutical Biosciences, one of the world’s foremost centers of pharmacometrics, and then to Switzerland in 2006, to join <a href="https://www.novartis.com">Novartis</a>.</p>
+<p>In 2010, I joined Exprimo, a pharmacometrics consulting company of some renown. Sadly, it was acquired by a multinational logistics company soon after, which ran it into the ground. Everyone left, and today, it no longer exists. On the bright side, this catastrophe gave some colleagues and I the push we needed to set up shop for ourselves, and in 2015, we formed <a href="https://www.occams.com">Occams</a>. My family and I moved to Germany in 2019, where we remain today.</p>
+<p>I’m a pharmacometrics consultant in my day job. I build pharmacokinetic (PK), pharmacodynamic (PD) and PK-PD models for drugs, based on clinical trial data; these models can be used to explain and predict changes in drug concentration over time, given a specific dose, and how those concentrations relate to the drug’s effects (both positive and negative). I’ve worked on drugs in infectious diseases, oncology, diabetes, and respiratory disease, amongst others - you can find a more detailed record of what I’ve been up to <a href="https://scholar.google.com/citations?user=p8gEvroAAAAJ&amp;hl=en">here</a>.</p>
+<p>I try to keep active in the greater pharmacometrics community. I was elected to the Board of Directors of the <a href="https://www.go-isop.org">International Society of Pharmacometrics (ISoP)</a> in 2016, and served as its President in 2019. My term ends at the end of 2021, and I’m pretty proud of what my ISoP colleagues and I managed to achieve while there. I’m currently part of the logistics team at <a href="https://www.page-meeting.org">PAGE</a>, sit on its Student Sponsorship committee, and have been on its Scientific Organizing Committee since 2013. I was the Novartis representative on the <a href="https://www.ddmore.foundation/">DDMoRe</a> project, served briefly as its Scientific Director, and co-led the team that developed the <a href="https://www.ddmore.foundation/thoughtflow/">Thoughtflow</a> concept. The success of DDMoRe is up for debate, but I’m firmly of the opinion that did some useful things (if only more people agreed).</p>
+<p>As well as being a full-time pharmacometrics consultant in my day job, I dabble occasionally in tool development and I’m a big fan of reproducibility in research. <a href="https://github.com/kestrel99/Census">Census</a> was my attempt at a run management tool for NONMEM, but it has fallen into disuse over the past few years (moral of the story - if you want to build a community around an open source tool, don’t develop it in Object Pascal). I helped port <a href="https://uupharmacometrics.github.io/xpose4/reference/xpose4-package.html">xpose4</a> from S-PLUS to R while at Uppsala, I maintain the <a href="https://github.com/kestrel99/pmxTools">pmxTools</a> package for R, and I’m on the <a href="https://nlmixrdevelopment.github.io/nlmixr/">nlmixr</a> development team (everyone should use nlmixr, it’s great).</p>
+<p>I’m on <a href="https://github.com/kestrel99">GitHub</a>. On social media, I can be found on <a href="https://www.twitter.com/justinwilkins">Twitter</a> and <a href="https://www.linkedin.com/in/justinjwilkins/">LinkedIn</a> (where I mostly just lurk).</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
