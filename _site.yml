@@ -5,7 +5,7 @@ description: |
 output_dir: "_site"
 base_url: https://numetric.ai
 repository_url: https://github.com/kestrel99/numetric.ai/
-google_analytics: "G-7C12N5LTW9"
+google_analytics: "UA-212909047-1"
 #theme: theme.css
 navbar:
   logo:
