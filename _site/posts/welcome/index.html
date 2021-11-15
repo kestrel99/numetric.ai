@@ -86,7 +86,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-<title>Numetrics: Welcome to Numetrics</title>
+<title>: Welcome to Numetrics</title>
 
 <meta property="description" itemprop="description" content="Welcome to Numetrics, the blog for R, pharmacometrics, and parts in between."/>
 
@@ -98,23 +98,23 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <meta name="article:author" content="Justin Wilkins"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-<meta property="og:title" content="Numetrics: Welcome to Numetrics"/>
+<meta property="og:title" content=": Welcome to Numetrics"/>
 <meta property="og:type" content="article"/>
 <meta property="og:description" content="Welcome to Numetrics, the blog for R, pharmacometrics, and parts in between."/>
 <meta property="og:url" content="https://numetric.ai/posts/welcome/"/>
 <meta property="og:image" content="https://numetric.ai/posts/welcome/../../assets/werl.jpg"/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:site_name" content="Numetrics"/>
+<meta property="og:site_name" content=""/>
 
 <!--  https://dev.twitter.com/cards/types/summary -->
 <meta property="twitter:card" content="summary_large_image"/>
-<meta property="twitter:title" content="Numetrics: Welcome to Numetrics"/>
+<meta property="twitter:title" content=": Welcome to Numetrics"/>
 <meta property="twitter:description" content="Welcome to Numetrics, the blog for R, pharmacometrics, and parts in between."/>
 <meta property="twitter:url" content="https://numetric.ai/posts/welcome/"/>
 <meta property="twitter:image" content="https://numetric.ai/posts/welcome/../../assets/werl.jpg"/>
 
 <!--  https://scholar.google.com/intl/en/scholar/inclusion.html#indexing -->
-<meta name="citation_title" content="Numetrics: Welcome to Numetrics"/>
+<meta name="citation_title" content=": Welcome to Numetrics"/>
 <meta name="citation_fulltext_html_url" content="https://numetric.ai/posts/welcome/"/>
 <meta name="citation_online_date" content="2021/09/23"/>
 <meta name="citation_publication_date" content="2021/09/23"/>
@@ -2064,6 +2064,25 @@ document.addEventListener('DOMContentLoaded', function() {
   <script src="../../site_libs/webcomponents-2.0.0/webcomponents.js"></script>
   <script src="../../site_libs/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
+<script type="text/javascript" src="https://www.cookieconsent.com/releases/3.1.0/cookie-consent.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+'notice_banner_type':'simple',
+'consent_type': 'express',
+'palette': 'light',
+'language': 'en',
+'website_name': 'Numetrics',
+'cookies_policy_url': 'url',
+'change_preferences_selector':'#CookiePreferences'
+});});</script>
+<script type="text/plain" cookie-consent="tracking" async src="https://www.googletagmanager.com/gtag/js?id=G-7C12N5LTW9"></script>
+<script type="text/plain" cookie-consent="tracking">
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-7C12N5LTW9');
+</script>
 <style type="text/css">
 @import url("https://cloud.typography.com/6771036/7342412/css/fonts.css");
 
@@ -2079,6 +2098,8 @@ margin-bottom: 0px !important;
 d-byline .byline {
 grid-template-columns: 1fr 1fr;
 grid-column: text;
+heading-size: 0.6rem;
+body-size: 0.6rem;
 font-family: "Ringside Narrow SSm A", "Ringside Narrow SSm B", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
@@ -2142,8 +2163,10 @@ color: #00500c;
 }
 
 .distill-site-header .nav-left {
-  margin-left: 0px;
-  
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .distill-site-header .nav-right {
@@ -2153,17 +2176,21 @@ font-size: 14px;
 letter-spacing: 1px;
 }
 
+.distill-site-header .logo img{
+  /*max-height: 40px;  Makes logo bigger, default was 20px */
+}
+
 .distill-site-nav a:hover {
 color: #ffffff !important;
 background: #008001;
 }
 
 d-title {
-padding-top: 10rem;
-background: #00500c;
+padding-top: 5rem;
+background: #fff;
 font-family: "Gotham SSm A", "Gotham SSm B", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 font-weight: 800;
-color: #fff;
+color: #00500c;
 }
 
 d-title h1 {
@@ -2184,6 +2211,11 @@ details {
 .active, details:hover {
   transition: max-height 0.2s ease-out;
   /* background-color: #acc2c2; */
+}
+
+.d-contents {
+  --heading-size:    18px;
+  --contents-size:   13px;
 }
 
 details {
@@ -2331,7 +2363,10 @@ body {
 <header class="header header--fixed" role="banner">
 <nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
-<a href="../../index.html" class="title">Numetrics</a>
+<a class="logo" href="https://numetric.ai">
+<img src="../../assets/numetrics_white.png" alt="Logo"/>
+</a>
+<a href="../../index.html" class="title"></a>
 <input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
 </div>
 <div class="nav-right">
@@ -2377,6 +2412,11 @@ body {
 <!--radix_placeholder_article_footer-->
 <div class="article-footer">
   <p class="social_footer">
+    <span class="disqus-comments">
+      <i class="fas fa-comments"></i>
+      &nbsp;
+      <span class="disqus-comment-count" data-disqus-identifier="posts/welcome/">Comment on this article</span>
+    </span>
     <span class="article-sharing">
       Share: &nbsp;
       <a href="https://twitter.com/share?text=Welcome%20to%20Numetrics&amp;url=https%3A%2F%2Fnumetric.ai%2Fposts%2Fwelcome%2F">
@@ -2390,6 +2430,20 @@ body {
       </a>
     </span>
   </p>
+  <script id="dsq-count-scr" src="https://numetrics.disqus.com/count.js" async></script>
+  <div id="disqus_thread" class="hidden"></div>
+  <script type="text/plain" cookie-consent="functionality">
+var disqus_config = function () {
+  this.page.url = 'https://numetric.ai/posts/welcome/';
+  this.page.identifier = 'posts/welcome/';
+};
+(function() {
+  var d = document, s = d.createElement('script');
+  s.src = 'https://numetrics.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+})();
+</script>
 </div>
 <!--/radix_placeholder_article_footer-->
 </div>
@@ -2406,11 +2460,11 @@ body {
   <p>If you see mistakes or want to suggest changes, please <a href="https://github.com/kestrel99/numetric.ai/issues/new">create an issue</a> on the source repository.</p>
   <h3 id="citation">Citation</h3>
   <p>For attribution, please cite this work as</p>
-  <pre class="citation-appendix short">Wilkins (2021, Sept. 23). Numetrics: Welcome to Numetrics. Retrieved from https://numetric.ai/posts/welcome/</pre>
+  <pre class="citation-appendix short">Wilkins (2021, Sept. 23). : Welcome to Numetrics. Retrieved from https://numetric.ai/posts/welcome/</pre>
   <p>BibTeX citation</p>
   <pre class="citation-appendix long">@misc{wilkins2021welcome,
   author = {Wilkins, Justin},
-  title = {Numetrics: Welcome to Numetrics},
+  title = {: Welcome to Numetrics},
   url = {https://numetric.ai/posts/welcome/},
   year = {2021}
 }</pre>

@@ -11,6 +11,10 @@ output:
     self_contained: false
 bibliography: biblio.bib
 csl: elsevier-vancouver.csl
+categories:
+  - R
+  - Docker
+  - nlmixr
 ---
 
 ```{r setup, include=FALSE}
@@ -31,7 +35,7 @@ Wouldn't it be great if we could just bundle the whole thing up in a sealed bott
 
 ## Getting started with Docker
 
-Occams is a Windows shop, and so we'll be focusing on getting everything up and running on Windows (11 Pro, in this case). This is pretty easy, assuming you have admin rights - just download and install [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows) based on the comprehensive guide Docker provides. (It can be somewhat fiddly, since virtualization needs to be turned on in your computer's BIOS, and Windows' Virtual Machine Platform and [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install) need to be installed - but this is straightforward.) Once you have Docker up and running, you may want to create a user account on Docker and log in, but this isn't required.
+[Occams](https://www.occams.com) (where I do my day job as a pharmacometrics consultant) is a Windows shop, and so we'll be focusing on getting everything up and running on Windows (11 Pro, in this case). This is pretty easy, assuming you have admin rights - just download and install [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows) based on the comprehensive guide Docker provides. (It can be somewhat fiddly, since virtualization needs to be turned on in your computer's BIOS, and Windows' Virtual Machine Platform and [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install) need to be installed - but this is straightforward.) Once you have Docker up and running, you may want to create a user account on Docker and log in, but this isn't required.
 
 ```{r, echo = FALSE, fig.align = 'center', out.width = '100%', results = 'markup'} 
 knitr::include_graphics("../../assets/docker.png")  
@@ -66,7 +70,7 @@ Drop back to your terminal, and enter:
 docker container run --rm -it -e PASSWORD=mypass -p 8787:8787 -v /c/MyProject:/home/rstudio/myproject kestrel99/nlmixr
 ```
 
-This will start the music: the Docker image will be loaded and you'll be able to access the system thanks to the bundled RStudio instance, at http://localhost:8787. The password will be *mypass*, but you can set this to anything you like at startup. 
+This will start the music: the Docker image will be loaded and you'll be able to access the system thanks to the bundled RStudio instance, by pointing your web browser at http://localhost:8787 (this won't happen automatically: if you're staring at a terminal window that says `[services.d] done`, this is your cue to head over to Firefox or Chrome or Edge or Safari (etc). The password will be *mypass*, but you can set this to anything you like at startup. RStudio Server is basically RStudio in a browser - although it's running from our Docker container, in principle it could be running anywhere.  
 
 ```{r, echo = FALSE, fig.align = 'center', out.width = '50%', results = 'markup'} 
 knitr::include_graphics("../../assets/login.png")  

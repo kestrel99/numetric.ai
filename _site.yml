@@ -1,13 +1,16 @@
 name: "Numetrics"
-title: "Numetrics"
+title: ""
 description: |
-  Numetrics
+  R, pharmacometrics and parts in between
 output_dir: "_site"
 base_url: https://numetric.ai
 repository_url: https://github.com/kestrel99/numetric.ai/
-#google_analytics: "UA-52682113-1"
+google_analytics: "G-7C12N5LTW9"
 #theme: theme.css
 navbar:
+  logo:
+    image: assets/numetrics_white.png
+    href: https://numetric.ai
   right:
     - text: "Home"
       href: index.html
@@ -22,11 +25,19 @@ navbar:
 collections:
   posts:
     share: [twitter, facebook, linkedin]
-    # disqus: data-justinwilkins
+    disqus: numetrics
 
 output:
   distill::distill_article:
     css: styles.css
     toc_depth: 2
 
+cookie_consent:
+  style: simple
+  type: express
+  palette: light
+  lang: en
+  cookies_policy: url
+  
+  
 # design shamelessly adapted from Notes From A Spreadsheet, https://www.mrworthington.com/
