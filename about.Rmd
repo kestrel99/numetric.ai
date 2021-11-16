@@ -25,3 +25,4 @@ As well as being a full-time pharmacometrics consultant in my day job, I dabble 
 
 I'm on [GitHub](https://github.com/kestrel99). On social media, I can be found on [Twitter](https://www.twitter.com/justinwilkins) and [LinkedIn](https://www.linkedin.com/in/justinjwilkins/) (where I mostly just lurk). 
 
+This blog occasionally pops up at [RWeekly.org](https://rweekly.org).

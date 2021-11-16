@@ -1,5 +1,5 @@
 name: "Numetrics"
-title: ""
+title: "Numetrics"
 description: |
   R, pharmacometrics and parts in between
 output_dir: "_site"
@@ -7,9 +7,6 @@ base_url: https://numetric.ai
 repository_url: https://github.com/kestrel99/numetric.ai/
 google_analytics: "UA-212909047-1"
 navbar:
-  logo:
-    image: assets/numetrics_white.png
-    href: https://numetric.ai
   right:
     - text: "Home"
       href: index.html

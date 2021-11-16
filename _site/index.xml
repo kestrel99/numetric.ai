@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
   <channel>
-    <title/>
+    <title>Numetrics</title>
     <link>https://numetric.ai</link>
     <atom:link href="https://numetric.ai/index.xml" rel="self" type="application/rss+xml"/>
     <description>R, pharmacometrics and parts in between
@@ -26,7 +26,7 @@
       <link>https://numetric.ai/posts/welcome</link>
       <description>Welcome to Numetrics, the blog for R, pharmacometrics, and parts in between.</description>
       <guid>https://numetric.ai/posts/welcome</guid>
-      <pubDate>Thu, 23 Sep 2021 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 22 Sep 2021 00:00:00 +0000</pubDate>
       <media:content url="https://numetric.ai/posts/welcome/../../assets/werl.jpg" medium="image" type="image/jpeg"/>
     </item>
   </channel>

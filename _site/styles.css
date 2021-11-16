@@ -1,4 +1,4 @@
-@import url("https://cloud.typography.com/6771036/7342412/css/fonts.css");
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i|Asap:400,400i,700,700i|Roboto:400,400i,700,700i&display=swap');
 
 d-article hr {
 grid-column: screen;
@@ -14,7 +14,7 @@ grid-template-columns: 1fr 1fr;
 grid-column: text;
 heading-size: 0.6rem;
 body-size: 0.6rem;
-font-family: "Ringside Narrow SSm A", "Ringside Narrow SSm B", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+font-family: "Asap", "Asap", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 d-article > d-code, d-article section > d-code {
@@ -47,7 +47,7 @@ font-family: "Operator Mono SSm A", "Operator Mono SSm B", Consolas, Monaco, 'An
 
 .posts-list .posts-list-caption {
 grid-column: screen;
-font-family: "Whitney SSm A", "Whitney SSm B", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 font-weight: 400;
 color: #7d7d7d;
 letter-spacing: 0px;
@@ -66,8 +66,8 @@ color: #00500c;
 
 .distill-site-nav {
   color: #ffffff;
-  font-family: "Gotham SSm A", "Gotham SSm B", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 15px;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
   font-weight: 600;
   background: #00500c;
   border-bottom: 2px solid #008001;
@@ -76,33 +76,27 @@ color: #00500c;
   box-shadow: 1px 1px 18px #00500c;
 }
 
-.distill-site-header .nav-left {
-  margin-left: 20px;
+.distill-site-header {
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  /* margin-left: 20px;*/
+  font-weight: 600;
   margin-right: 20px;
   margin-bottom: 10px;
   margin-top: 10px;
 }
 
-.distill-site-header .nav-right {
-/* margin-right: 20px; */
-/* text-transform: uppercase; */
-font-size: 14px;
-letter-spacing: 1px;
-}
 
-.distill-site-header .logo img{
-  /*max-height: 40px;  Makes logo bigger, default was 20px */
-}
-
-.distill-site-nav a:hover {
+.distill-site-nav .nav-right a:hover {
 color: #ffffff !important;
 background: #008001;
 }
 
+
 d-title {
 padding-top: 5rem;
 background: #fff;
-font-family: "Gotham SSm A", "Gotham SSm B", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+font-family: "Asap", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 font-weight: 800;
 color: #00500c;
 }
@@ -178,7 +172,7 @@ d-article {
 d-article h1 {
     font-weight: 800;
     color: #2d2d2d;
-    font-family: "Gotham SSm A", "Gotham SSm B", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     letter-spacing: 0px !important;
 }
 
@@ -189,7 +183,7 @@ background: rgba(222,207,64, 0.4);
 }
 
 .posts-list .metadata .publishedDate {
-font-family: "Ringside Narrow SSm A", "Ringside Narrow SSm B", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 text-transform: uppercase;
 font-size: 1rem;
 letter-spacing: .9px;
@@ -204,19 +198,19 @@ color: #2d2d2d;
 font-size: 30px !important;
 font-weight: 700 !important;
 letter-spacing:0px !important;
-font-family: "Gotham SSm A", "Gotham SSm B", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+font-family: "Asap", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
 }
 
 d-article h1 {
 font-weight: 800;
 color: #2d2d2d;
-font-family: "Gotham SSm A", "Gotham SSm B", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
 letter-spacing: 3px;
 }
 
 d-article h2 {
 font-size: 24px;
-font-family: "Ringside Narrow SSm A", "Ringside Narrow SSm B", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 font-weight: 600;
 letter-spacing: 1px;
 color: #008001;
@@ -224,18 +218,18 @@ border-bottom: 1.3px solid rgba(140, 143, 147, 0.5);
 }
 
 .highcharts-container text {
-font-family: "Whitney SSm A", "Whitney SSm B", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif  !important;
+font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif  !important;
 }
 
 body {
-    font-family: "Whitney SSm A", "Whitney SSm B", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-weight: 400;
     overflow-x: hidden;
     overflow-y: auto
 }
 
 .posts-list .description h2, .posts-list .description p {
-    font-family: "Gotham SSm A", "Gotham SSm B", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+    font-family: "Asap", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
 }
 
 .distill-site-nav a {
@@ -245,12 +239,6 @@ body {
 
 .distill-site-nav a:hover {
   color: white;
-}
-
-.distill-site-header {
-}
-
-.distill-site-footer {
 }
 
 @media print {
