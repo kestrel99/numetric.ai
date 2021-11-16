@@ -6,7 +6,6 @@ output_dir: "_site"
 base_url: https://numetric.ai
 repository_url: https://github.com/kestrel99/numetric.ai/
 google_analytics: "UA-212909047-1"
-#theme: theme.css
 navbar:
   logo:
     image: assets/numetrics_white.png
@@ -22,6 +21,8 @@ navbar:
       href: https://github.com/kestrel99
     - icon: fa fa-twitter
       href: https://twitter.com/justinwilkins
+    - icon: fa fa-rss
+      href: index.xml
 collections:
   posts:
     share: [twitter, facebook, linkedin]
@@ -39,5 +40,10 @@ cookie_consent:
   lang: en
   cookies_policy: url
   
-  
+rss:
+  categories:
+    - R
+    - nlmixr
+    
+    
 # design shamelessly adapted from Notes From A Spreadsheet, https://www.mrworthington.com/

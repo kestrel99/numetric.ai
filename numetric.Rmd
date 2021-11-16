@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Some history
 
-Numetric GmbH was formed in Switzerland in 2015 by Justin Wilkins after he left SGS Exprimo. This first iteration of Numetric was a founder member of the [Occams](https://www.occcams.com) cooperative, and together with Occams BV (run by Rik Schoemaker and based in The Netherlands), Wade Solutions (run by Janet Wade in Sweden) and Winkmetrix GmbH (run by Julia Winkler and based in Germany), provided pharmacometric data analysis services to the pharmaceuticals industry under the Occams banner. 
+Numetric GmbH was formed in Switzerland in 2015 by Justin Wilkins after he left SGS Exprimo. This first iteration of Numetric was a founder member of the [Occams](https://www.occams.com) cooperative, and together with Occams BV (run by Rik Schoemaker and based in The Netherlands), Wade Solutions (run by Janet Wade in Sweden) and Winkmetrix GmbH (run by Julia Winkler and based in Germany), provided pharmacometric data analysis services to the pharmaceuticals industry under the Occams banner. 
 
 In 2019, Dr Wilkins and his family moved to Germany, and Numetric GmbH (Switzerland) was liquidated. The current version of Numetric GmbH was started at the same time as a German company, and replaced the Swiss version as a member of [Occams](https://www.occcams.com). (Complicated, I know, but migrating the original version of the company across an EU border turned out to be even more so.)
 

@@ -13,7 +13,7 @@
       "title": "Posts",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-11-15T12:18:41+01:00"
+      "last_modified": "2021-11-16T16:42:32+01:00"
     },
     {
       "path": "numetric.html",
@@ -21,7 +21,7 @@
       "description": "Numetric GmbH is a small limited liability consulting company, providing pharmacometric data analysis services to the global pharmaceutical industry. ",
       "author": [],
       "contents": "\r\n\r\nSome history\r\nNumetric GmbH was formed in Switzerland in 2015 by Justin Wilkins after he left SGS Exprimo. This first iteration of Numetric was a founder member of the Occams cooperative, and together with Occams BV (run by Rik Schoemaker and based in The Netherlands), Wade Solutions (run by Janet Wade in Sweden) and Winkmetrix GmbH (run by Julia Winkler and based in Germany), provided pharmacometric data analysis services to the pharmaceuticals industry under the Occams banner.\r\nIn 2019, Dr Wilkins and his family moved to Germany, and Numetric GmbH (Switzerland) was liquidated. The current version of Numetric GmbH was started at the same time as a German company, and replaced the Swiss version as a member of Occams. (Complicated, I know, but migrating the original version of the company across an EU border turned out to be even more so.)\r\nOverview and contact details\r\nNumetric GmbH has two employees.\r\n \r\n \r\nJustin Wilkins, PhD\r\nOwner and CEO\r\nDr. rer. nat. Stefanie Wilkins\r\nSenior Scientist (20%)\r\nNumetric GmbH Kirchnerstr. 22 59457 Werl Germany\r\n \r\n \r\nTel\r\n+49 2922 927 8843\r\nEmail\r\ninfo@numetric.de\r\n\r\n\r\n\r\n{\"x\":{\"options\":{\"crs\":{\"crsClass\":\"L.CRS.EPSG3857\",\"code\":null,\"proj4def\":null,\"projectedBounds\":null,\"options\":{}}},\"calls\":[{\"method\":\"addTiles\",\"args\":[\"//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png\",null,null,{\"minZoom\":0,\"maxZoom\":18,\"tileSize\":256,\"subdomains\":\"abc\",\"errorTileUrl\":\"\",\"tms\":false,\"noWrap\":false,\"zoomOffset\":0,\"zoomReverse\":false,\"opacity\":1,\"zIndex\":1,\"detectRetina\":false,\"attribution\":\"&copy; <a href=\\\"http://openstreetmap.org\\\">OpenStreetMap<\\/a> contributors, <a href=\\\"http://creativecommons.org/licenses/by-sa/2.0/\\\">CC-BY-SA<\\/a>\"}]},{\"method\":\"addMarkers\",\"args\":[51.55,7.884,null,null,null,{\"interactive\":true,\"draggable\":false,\"keyboard\":true,\"title\":\"\",\"alt\":\"\",\"zIndexOffset\":0,\"opacity\":1,\"riseOnHover\":false,\"riseOffset\":250},\"Büderich\",null,null,null,null,{\"interactive\":false,\"permanent\":false,\"direction\":\"auto\",\"opacity\":1,\"offset\":[0,0],\"textsize\":\"10px\",\"textOnly\":false,\"className\":\"\",\"sticky\":true},null]}],\"limits\":{\"lat\":[51.55,51.55],\"lng\":[7.884,7.884]}},\"evals\":[],\"jsHooks\":[]}\r\nFigure 1: Buederich, Germany\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-11-15T12:08:20+01:00"
+      "last_modified": "2021-11-16T16:41:59+01:00"
     }
   ],
   "collections": ["posts/posts.json"]
