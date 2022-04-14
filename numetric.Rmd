@@ -33,7 +33,7 @@ Germany
 | &nbsp;          | &nbsp;               |
 | ----------------|----------------------|
 | Tel             | +49 2922 927 8843    |
-| Email           | info@numetric.de     |
+| Email           | info@numetric.ai     |
 
 
 ```{r, layout="l-screen-inset shaded", fig.cap="Buederich, Germany"}

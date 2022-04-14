@@ -56,7 +56,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { color: #20794d; } /* Attribute */
+code span.at { } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
 code span.cf { color: #007ba5; } /* ControlFlow */
@@ -77,13 +77,14 @@ code span.kw { color: #007ba5; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
 code span.ot { color: #007ba5; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
-code span.sc { color: #20794d; } /* SpecialChar */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
 code span.st { color: #20794d; } /* String */
 code span.va { color: #111111; } /* Variable */
 code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
+
 
   <!--radix_placeholder_meta_tags-->
   <title>Numetrics: About this site</title>
@@ -455,7 +456,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   </style>
 
-  <script src="site_libs/jquery-3.5.1/jquery-3.5.1.min.js"></script>
+  <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
   <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
   <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
@@ -1862,7 +1863,10 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
-        var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
+        var refs = $(this).attr('data-cites').split(" ");
+        var refHtml = refs.map(function(ref) {
+          return "<p>" + $('#ref-' + ref).html() + "</p>";
+        }).join("\n");
         window.tippy(this, {
           allowHTML: true,
           content: refHtml,
@@ -2033,7 +2037,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.13/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2359,21 +2363,80 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h1>About this site</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>This is primarily a blog for expressing my random thoughts, opinions, and the odd tutorial about R or pharmacometrics, but also serves as the de facto homepage for my company, Numetric GmbH, which is a member of Occams.</p></p>
+<p><p>This is primarily a blog for expressing my random thoughts,
+opinions, and the odd tutorial about R or pharmacometrics, but also
+serves as the de facto homepage for my company, Numetric GmbH, which is
+a member of Occams.</p></p>
 </div>
 
 
 <div class="d-article">
 <h2 id="a-bit-about-me">A bit about me</h2>
-<p>I’m from Cape Town, one of the world’s sunnier places, and I have a PhD in pharmacology (my thesis was on the population pharmacokinetics of rifampicin, isoniazid, and pyrazinamide, key drugs in the treatment of tuberculosis) from the <a href="https://www.uct.ac.za">University of Cape Town</a> - I also collected a BSc in microbiology and biochemistry, and an MSc in the pharmacoeconomics of malaria while I was there (as you do).</p>
-<p>Since then, I’ve moved around a bit. I joined <a href="https://www.uu.se">Uppsala University</a> as a postdoctoral researcher in 2004, where I had the good fortune to work in the storied Department of Pharmaceutical Biosciences, one of the world’s foremost centers of pharmacometrics, and then to Switzerland in 2006, to join <a href="https://www.novartis.com">Novartis</a>.</p>
-<p>In 2010, I joined Exprimo, a pharmacometrics consulting company of some renown. Sadly, it was acquired by a multinational logistics company soon after, which ran it into the ground. Everyone left, and today, it no longer exists. On the bright side, this catastrophe gave some colleagues and I the push we needed to set up shop for ourselves, and in 2015, we formed <a href="https://www.occams.com">Occams</a>. My family and I moved to Germany in 2019, where we remain today.</p>
-<p>I’m a pharmacometrics consultant in my day job. I build pharmacokinetic (PK), pharmacodynamic (PD) and PK-PD models for drugs, based on clinical trial data; these models can be used to explain and predict changes in drug concentration over time, given a specific dose, and how those concentrations relate to the drug’s effects (both positive and negative). I’ve worked on drugs in infectious diseases, oncology, diabetes, and respiratory disease, amongst others - you can find a more detailed record of what I’ve been up to <a href="https://scholar.google.com/citations?user=p8gEvroAAAAJ&amp;hl=en">here</a>.</p>
-<p>I try to keep active in the greater pharmacometrics community. I was elected to the Board of Directors of the <a href="https://www.go-isop.org">International Society of Pharmacometrics (ISoP)</a> in 2016, and served as its President in 2019. My term ends at the end of 2021, and I’m pretty proud of what my ISoP colleagues and I managed to achieve while there. I’m currently part of the logistics team at <a href="https://www.page-meeting.org">PAGE</a>, sit on its Student Sponsorship committee, and have been on its Scientific Organizing Committee since 2013. I was the Novartis representative on the <a href="https://www.ddmore.foundation/">DDMoRe</a> project, served briefly as its Scientific Director, and co-led the team that developed the <a href="https://www.ddmore.foundation/thoughtflow/">Thoughtflow</a> concept. The success of DDMoRe is up for debate, but I’m firmly of the opinion that did some useful things (if only more people agreed).</p>
-<p>As well as being a full-time pharmacometrics consultant in my day job, I dabble occasionally in tool development and I’m a big fan of reproducibility in research. <a href="https://github.com/kestrel99/Census">Census</a> was my attempt at a run management tool for NONMEM, but it has fallen into disuse over the past few years (moral of the story - if you want to build a community around an open source tool, don’t develop it in Object Pascal). I helped port <a href="https://uupharmacometrics.github.io/xpose4/reference/xpose4-package.html">xpose4</a> from S-PLUS to R while at Uppsala, I maintain the <a href="https://github.com/kestrel99/pmxTools">pmxTools</a> package for R, and I’m on the <a href="https://nlmixrdevelopment.github.io/nlmixr/">nlmixr</a> development team (everyone should use nlmixr, it’s great).</p>
-<p>I’m on <a href="https://github.com/kestrel99">GitHub</a>. On social media, I can be found on <a href="https://www.twitter.com/justinwilkins">Twitter</a> and <a href="https://www.linkedin.com/in/justinjwilkins/">LinkedIn</a> (where I mostly just lurk).</p>
-<p>This blog occasionally pops up at <a href="https://rweekly.org">RWeekly.org</a>.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<p>I’m from Cape Town, one of the world’s sunnier places, and I have a
+PhD in pharmacology (my thesis was on the population pharmacokinetics of
+rifampicin, isoniazid, and pyrazinamide, key drugs in the treatment of
+tuberculosis) from the <a href="https://www.uct.ac.za">University of
+Cape Town</a> - I also collected a BSc in microbiology and biochemistry,
+and an MSc in the pharmacoeconomics of malaria while I was there (as you
+do).</p>
+<p>Since then, I’ve moved around a bit. I joined <a
+href="https://www.uu.se">Uppsala University</a> as a postdoctoral
+researcher in 2004, where I had the good fortune to work in the storied
+Department of Pharmaceutical Biosciences, one of the world’s foremost
+centers of pharmacometrics, and then to Switzerland in 2006, to join <a
+href="https://www.novartis.com">Novartis</a>.</p>
+<p>In 2010, I joined Exprimo, a pharmacometrics consulting company of
+some renown. Sadly, it was acquired by a multinational logistics company
+soon after, which ran it into the ground. Everyone left, and today, it
+no longer exists. On the bright side, this catastrophe gave some
+colleagues and I the push we needed to set up shop for ourselves, and in
+2015, we formed <a href="https://www.occams.com">Occams</a>. My family
+and I moved to Germany in 2019, where we remain today.</p>
+<p>I’m a pharmacometrics consultant in my day job. I build
+pharmacokinetic (PK), pharmacodynamic (PD) and PK-PD models for drugs,
+based on clinical trial data; these models can be used to explain and
+predict changes in drug concentration over time, given a specific dose,
+and how those concentrations relate to the drug’s effects (both positive
+and negative). I’ve worked on drugs in infectious diseases, oncology,
+diabetes, and respiratory disease, amongst others - you can find a more
+detailed record of what I’ve been up to <a
+href="https://scholar.google.com/citations?user=p8gEvroAAAAJ&amp;hl=en">here</a>.</p>
+<p>I try to keep active in the greater pharmacometrics community. I was
+elected to the Board of Directors of the <a
+href="https://www.go-isop.org">International Society of Pharmacometrics
+(ISoP)</a> in 2016, and served as its President in 2019. My term ended
+at the end of 2021, and I’m pretty proud of what my ISoP colleagues and
+I managed to achieve while there. I’m currently part of the logistics
+team at <a href="https://www.page-meeting.org">PAGE</a>, sit on its
+Student Sponsorship committee, and have been on its Scientific
+Organizing Committee since 2013. I was the Novartis representative on
+the <a href="https://www.ddmore.foundation/">DDMoRe</a> project, served
+briefly as its Scientific Director, and co-led the team that developed
+the <a href="https://www.ddmore.foundation/thoughtflow/">Thoughtflow</a>
+concept. The success of DDMoRe is up for debate, but I’m firmly of the
+opinion that did some useful things (if only more people agreed).</p>
+<p>As well as being a full-time pharmacometrics consultant in my day
+job, I dabble occasionally in tool development and I’m a big fan of
+reproducibility in research. <a
+href="https://github.com/kestrel99/Census">Census</a> was my attempt at
+a run management tool for NONMEM, but it has fallen into disuse over the
+past few years (moral of the story - if you want to build a community
+around an open source tool, don’t develop it in Object Pascal). I helped
+port <a
+href="https://uupharmacometrics.github.io/xpose4/reference/xpose4-package.html">xpose4</a>
+from S-PLUS to R while at Uppsala, I maintain the <a
+href="https://github.com/kestrel99/pmxTools">pmxTools</a> package for R,
+and I’m on the <a href="https://github.com/nlmixr2/nlmixr2">nlmixr</a>
+development team (everyone should use nlmixr, it’s great).</p>
+<p>I’m on <a href="https://github.com/kestrel99">GitHub</a>. On social
+media, I can be found on <a
+href="https://www.twitter.com/justinwilkins">Twitter</a> and <a
+href="https://www.linkedin.com/in/justinjwilkins/">LinkedIn</a> (where I
+mostly just lurk).</p>
+<p>This blog occasionally pops up at <a
+href="https://rweekly.org">RWeekly.org</a>.</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
