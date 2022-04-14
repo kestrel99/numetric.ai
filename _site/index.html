@@ -1861,6 +1861,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
+        if ($(this).children()[0].nodeName == "D-FOOTNOTE") {
+          var fn = $(this).children()[0]
+          $(this).html(fn.shadowRoot.querySelector("sup"))
+          $(this).id = fn.id
+          fn.remove()
+        }
         var refs = $(this).attr('data-cites').split(" ");
         var refHtml = refs.map(function(ref) {
           return "<p>" + $('#ref-' + ref).html() + "</p>";
@@ -2492,6 +2498,28 @@ function init_posts_list() {
 <div class="posts-container posts-with-sidebar posts-apply-limit l-screen-inset">
 <div class="posts-list">
 <h1 class="posts-list-caption" data-caption="Posts">Posts</h1>
+<a href="posts/2022-04-14-nlmixr-at-wcop-2022/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":["R","Docker","nlmixr","WCoP"]}</script>
+<div class="metadata">
+<div class="publishedDate">April 14, 2022</div>
+<div class="dt-authors">
+<div class="dt-author">Justin Wilkins</div>
+</div>
+</div>
+<div class="thumbnail">
+<img src="assets/wcop1.jpg"/>
+</div>
+<div class="description">
+<h2>nlmixr at WCoP 2022</h2>
+<div class="dt-tags">
+<div class="dt-tag">R</div>
+<div class="dt-tag">Docker</div>
+<div class="dt-tag">nlmixr</div>
+<div class="dt-tag">WCoP</div>
+</div>
+<p>The nlmixr development team presented a nlmixr course in Cape Town, South Africa, for WCoP 2022. Here's how to get nlmixr up and running with the course materials.</p>
+</div>
+</a>
 <a href="posts/2021-11-14-nlmixr-docked-and-loaded/" class="post-preview">
 <script class="post-metadata" type="text/json">{"categories":["R","Docker","nlmixr"]}</script>
 <div class="metadata">
@@ -2537,18 +2565,22 @@ function init_posts_list() {
 <ul>
 <li>
 <a href="#category:Articles">Articles</a>
-<span class="category-count">(2)</span>
+<span class="category-count">(3)</span>
 </li>
 <li>
 <a href="#category:Docker">Docker</a>
-<span class="category-count">(1)</span>
+<span class="category-count">(2)</span>
 </li>
 <li>
 <a href="#category:nlmixr">nlmixr</a>
-<span class="category-count">(1)</span>
+<span class="category-count">(2)</span>
 </li>
 <li>
 <a href="#category:R">R</a>
+<span class="category-count">(2)</span>
+</li>
+<li>
+<a href="#category:WCoP">WCoP</a>
 <span class="category-count">(1)</span>
 </li>
 </ul>

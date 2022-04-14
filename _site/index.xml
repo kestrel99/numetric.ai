@@ -7,7 +7,20 @@
     <description>R, pharmacometrics and parts in between
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Sun, 14 Nov 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 14 Apr 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>nlmixr at WCoP 2022</title>
+      <dc:creator>Justin Wilkins</dc:creator>
+      <link>https://numetric.ai/posts/2022-04-14-nlmixr-at-wcop-2022</link>
+      <description>The nlmixr development team presented a nlmixr course in Cape Town, South Africa, for WCoP 2022. Here's how to get nlmixr up and running with the course materials.</description>
+      <category>R</category>
+      <category>Docker</category>
+      <category>nlmixr</category>
+      <category>WCoP</category>
+      <guid>https://numetric.ai/posts/2022-04-14-nlmixr-at-wcop-2022</guid>
+      <pubDate>Thu, 14 Apr 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://numetric.ai/posts/2022-04-14-nlmixr-at-wcop-2022/../../assets/wcop1.jpg" medium="image" type="image/jpeg"/>
+    </item>
     <item>
       <title>nlmixr: Docked and loaded</title>
       <dc:creator>Justin Wilkins</dc:creator>

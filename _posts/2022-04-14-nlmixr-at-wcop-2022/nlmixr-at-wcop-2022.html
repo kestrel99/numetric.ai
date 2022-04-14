@@ -87,638 +87,40 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--radix_placeholder_meta_tags-->
-  <title>Numetrics: About this site</title>
+  <title>nlmixr at WCoP 2022</title>
 
-  <meta property="description" itemprop="description" content="This is primarily a blog for expressing my random thoughts, opinions, and the odd tutorial about R&#10;or pharmacometrics, but also serves as the de facto homepage for my company, Numetric GmbH, which is a member of Occams."/>
+  <meta property="description" itemprop="description" content="The nlmixr development team presented a nlmixr course in Cape Town, South Africa, for WCoP 2022. Here&#39;s how to get nlmixr up and running with the course materials."/>
 
 
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2022-04-14"/>
+  <meta property="article:created" itemprop="dateCreated" content="2022-04-14"/>
+  <meta name="article:author" content="Justin Wilkins"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Numetrics: About this site"/>
+  <meta property="og:title" content="nlmixr at WCoP 2022"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="This is primarily a blog for expressing my random thoughts, opinions, and the odd tutorial about R&#10;or pharmacometrics, but also serves as the de facto homepage for my company, Numetric GmbH, which is a member of Occams."/>
+  <meta property="og:description" content="The nlmixr development team presented a nlmixr course in Cape Town, South Africa, for WCoP 2022. Here&#39;s how to get nlmixr up and running with the course materials."/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:site_name" content="Numetrics"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Numetrics: About this site"/>
-  <meta property="twitter:description" content="This is primarily a blog for expressing my random thoughts, opinions, and the odd tutorial about R&#10;or pharmacometrics, but also serves as the de facto homepage for my company, Numetric GmbH, which is a member of Occams."/>
+  <meta property="twitter:title" content="nlmixr at WCoP 2022"/>
+  <meta property="twitter:description" content="The nlmixr development team presented a nlmixr course in Cape Town, South Africa, for WCoP 2022. Here&#39;s how to get nlmixr up and running with the course materials."/>
 
   <!--/radix_placeholder_meta_tags-->
+  
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description"]}},"value":[{"type":"character","attributes":{},"value":["About this site"]},{"type":"character","attributes":{},"value":["This is primarily a blog for expressing my random thoughts, opinions, and the odd tutorial about R\nor pharmacometrics, but also serves as the de facto homepage for my company, Numetric GmbH, which is a member of Occams."]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","bibliography","csl","categories"]}},"value":[{"type":"character","attributes":{},"value":["nlmixr at WCoP 2022"]},{"type":"character","attributes":{},"value":["The nlmixr development team presented a nlmixr course in Cape Town, South Africa, for WCoP 2022. Here's how to get nlmixr up and running with the course materials.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Justin Wilkins"]},{"type":"character","attributes":{},"value":["https://www.occams.com"]}]}]},{"type":"character","attributes":{},"value":["2022-04-14"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["biblio.bib"]},{"type":"character","attributes":{},"value":["elsevier-vancouver.csl"]},{"type":"character","attributes":{},"value":["R","Docker","nlmixr","WCoP"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["biblio.bib","elsevier-vancouver-author-date.csl","elsevier-vancouver.csl","nature-publishing-group-vancouver.csl","nlmixr-at-wcop-2022_files/anchor-4.2.2/anchor.min.js","nlmixr-at-wcop-2022_files/bowser-1.9.3/bowser.min.js","nlmixr-at-wcop-2022_files/distill-2.2.21/template.v2.js","nlmixr-at-wcop-2022_files/header-attrs-2.13/header-attrs.js","nlmixr-at-wcop-2022_files/jquery-3.6.0/jquery-3.6.0.js","nlmixr-at-wcop-2022_files/jquery-3.6.0/jquery-3.6.0.min.js","nlmixr-at-wcop-2022_files/jquery-3.6.0/jquery-3.6.0.min.map","nlmixr-at-wcop-2022_files/popper-2.6.0/popper.min.js","nlmixr-at-wcop-2022_files/tippy-6.2.7/tippy-bundle.umd.min.js","nlmixr-at-wcop-2022_files/tippy-6.2.7/tippy-light-border.css","nlmixr-at-wcop-2022_files/tippy-6.2.7/tippy.css","nlmixr-at-wcop-2022_files/tippy-6.2.7/tippy.umd.min.js","nlmixr-at-wcop-2022_files/webcomponents-2.0.0/webcomponents.js"]}
+  </script>
   <!--radix_placeholder_navigation_in_header-->
-  <meta name="distill:offset" content=""/>
-
-  <script type="application/javascript">
-
-    window.headroom_prevent_pin = false;
-
-    window.document.addEventListener("DOMContentLoaded", function (event) {
-
-      // initialize headroom for banner
-      var header = $('header').get(0);
-      var headerHeight = header.offsetHeight;
-      var headroom = new Headroom(header, {
-        tolerance: 5,
-        onPin : function() {
-          if (window.headroom_prevent_pin) {
-            window.headroom_prevent_pin = false;
-            headroom.unpin();
-          }
-        }
-      });
-      headroom.init();
-      if(window.location.hash)
-        headroom.unpin();
-      $(header).addClass('headroom--transition');
-
-      // offset scroll location for banner on hash change
-      // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
-      window.addEventListener("hashchange", function(event) {
-        window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
-      });
-
-      // responsive menu
-      $('.distill-site-header').each(function(i, val) {
-        var topnav = $(this);
-        var toggle = topnav.find('.nav-toggle');
-        toggle.on('click', function() {
-          topnav.toggleClass('responsive');
-        });
-      });
-
-      // nav dropdowns
-      $('.nav-dropbtn').click(function(e) {
-        $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
-        $(this).parent().siblings('.nav-dropdown')
-           .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
-      });
-      $("body").click(function(e){
-        $('.nav-dropdown-content').removeClass('nav-dropdown-active');
-      });
-      $(".nav-dropdown").click(function(e){
-        e.stopPropagation();
-      });
-    });
-  </script>
-
-  <style type="text/css">
-
-  /* Theme (user-documented overrideables for nav appearance) */
-
-  .distill-site-nav {
-    color: rgba(255, 255, 255, 0.8);
-    background-color: #0F2E3D;
-    font-size: 15px;
-    font-weight: 300;
-  }
-
-  .distill-site-nav a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .distill-site-nav a:hover {
-    color: white;
-  }
-
-  @media print {
-    .distill-site-nav {
-      display: none;
-    }
-  }
-
-  .distill-site-header {
-
-  }
-
-  .distill-site-footer {
-
-  }
-
-
-  /* Site Header */
-
-  .distill-site-header {
-    width: 100%;
-    box-sizing: border-box;
-    z-index: 3;
-  }
-
-  .distill-site-header .nav-left {
-    display: inline-block;
-    margin-left: 8px;
-  }
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header .nav-left {
-      margin-left: 0;
-    }
-  }
-
-
-  .distill-site-header .nav-right {
-    float: right;
-    margin-right: 8px;
-  }
-
-  .distill-site-header a,
-  .distill-site-header .title {
-    display: inline-block;
-    text-align: center;
-    padding: 14px 10px 14px 10px;
-  }
-
-  .distill-site-header .title {
-    font-size: 18px;
-    min-width: 150px;
-  }
-
-  .distill-site-header .logo {
-    padding: 0;
-  }
-
-  .distill-site-header .logo img {
-    display: none;
-    max-height: 20px;
-    width: auto;
-    margin-bottom: -4px;
-  }
-
-  .distill-site-header .nav-image img {
-    max-height: 18px;
-    width: auto;
-    display: inline-block;
-    margin-bottom: -3px;
-  }
-
-
-
-  @media screen and (min-width: 1000px) {
-    .distill-site-header .logo img {
-      display: inline-block;
-    }
-    .distill-site-header .nav-left {
-      margin-left: 20px;
-    }
-    .distill-site-header .nav-right {
-      margin-right: 20px;
-    }
-    .distill-site-header .title {
-      padding-left: 12px;
-    }
-  }
-
-
-  .distill-site-header .nav-toggle {
-    display: none;
-  }
-
-  .nav-dropdown {
-    display: inline-block;
-    position: relative;
-  }
-
-  .nav-dropdown .nav-dropbtn {
-    border: none;
-    outline: none;
-    color: rgba(255, 255, 255, 0.8);
-    padding: 16px 10px;
-    background-color: transparent;
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    margin: 0;
-    margin-top: 1px;
-    z-index: 2;
-  }
-
-  .nav-dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 200px;
-    border: 1px solid rgba(0,0,0,0.15);
-    border-radius: 4px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
-    z-index: 1;
-    margin-top: 2px;
-    white-space: nowrap;
-    padding-top: 4px;
-    padding-bottom: 4px;
-  }
-
-  .nav-dropdown-content hr {
-    margin-top: 4px;
-    margin-bottom: 4px;
-    border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
-
-  .nav-dropdown-active {
-    display: block;
-  }
-
-  .nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
-    color: black;
-    padding: 6px 24px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-
-  .nav-dropdown-content .nav-dropdown-header {
-    display: block;
-    padding: 5px 24px;
-    padding-bottom: 0;
-    text-transform: uppercase;
-    font-size: 14px;
-    color: #999999;
-    white-space: nowrap;
-  }
-
-  .nav-dropdown:hover .nav-dropbtn {
-    color: white;
-  }
-
-  .nav-dropdown-content a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-
-  .nav-right .nav-dropdown-content {
-    margin-left: -45%;
-    right: 0;
-  }
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
-    .distill-site-header a.nav-toggle {
-      float: right;
-      display: block;
-    }
-    .distill-site-header .title {
-      margin-left: 0;
-    }
-    .distill-site-header .nav-right {
-      margin-right: 0;
-    }
-    .distill-site-header {
-      overflow: hidden;
-    }
-    .nav-right .nav-dropdown-content {
-      margin-left: 0;
-    }
-  }
-
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header.responsive {position: relative; min-height: 500px; }
-    .distill-site-header.responsive a.nav-toggle {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .distill-site-header.responsive a,
-    .distill-site-header.responsive .nav-dropdown {
-      display: block;
-      text-align: left;
-    }
-    .distill-site-header.responsive .nav-left,
-    .distill-site-header.responsive .nav-right {
-      width: 100%;
-    }
-    .distill-site-header.responsive .nav-dropdown {float: none;}
-    .distill-site-header.responsive .nav-dropdown-content {position: relative;}
-    .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
-      display: block;
-      width: 100%;
-      text-align: left;
-    }
-  }
-
-  /* Site Footer */
-
-  .distill-site-footer {
-    width: 100%;
-    overflow: hidden;
-    box-sizing: border-box;
-    z-index: 3;
-    margin-top: 30px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    text-align: center;
-  }
-
-  /* Headroom */
-
-  d-title {
-    padding-top: 6rem;
-  }
-
-  @media print {
-    d-title {
-      padding-top: 4rem;
-    }
-  }
-
-  .headroom {
-    z-index: 1000;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-
-  .headroom--transition {
-    transition: all .4s ease-in-out;
-  }
-
-  .headroom--unpinned {
-    top: -100px;
-  }
-
-  .headroom--pinned {
-    top: 0;
-  }
-
-  /* adjust viewport for navbar height */
-  /* helps vertically center bootstrap (non-distill) content */
-  .min-vh-100 {
-    min-height: calc(100vh - 100px) !important;
-  }
-
-  </style>
-
-  <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
-  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
-  <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
-  <script src="site_libs/autocomplete-0.37.1/autocomplete.min.js"></script>
-  <script src="site_libs/fuse-6.4.1/fuse.min.js"></script>
-
-  <script type="application/javascript">
-
-  function getMeta(metaName) {
-    var metas = document.getElementsByTagName('meta');
-    for (let i = 0; i < metas.length; i++) {
-      if (metas[i].getAttribute('name') === metaName) {
-        return metas[i].getAttribute('content');
-      }
-    }
-    return '';
-  }
-
-  function offsetURL(url) {
-    var offset = getMeta('distill:offset');
-    return offset ? offset + '/' + url : url;
-  }
-
-  function createFuseIndex() {
-
-    // create fuse index
-    var options = {
-      keys: [
-        { name: 'title', weight: 20 },
-        { name: 'categories', weight: 15 },
-        { name: 'description', weight: 10 },
-        { name: 'contents', weight: 5 },
-      ],
-      ignoreLocation: true,
-      threshold: 0
-    };
-    var fuse = new window.Fuse([], options);
-
-    // fetch the main search.json
-    return fetch(offsetURL('search.json'))
-      .then(function(response) {
-        if (response.status == 200) {
-          return response.json().then(function(json) {
-            // index main articles
-            json.articles.forEach(function(article) {
-              fuse.add(article);
-            });
-            // download collections and index their articles
-            return Promise.all(json.collections.map(function(collection) {
-              return fetch(offsetURL(collection)).then(function(response) {
-                if (response.status === 200) {
-                  return response.json().then(function(articles) {
-                    articles.forEach(function(article) {
-                      fuse.add(article);
-                    });
-                  })
-                } else {
-                  return Promise.reject(
-                    new Error('Unexpected status from search index request: ' +
-                              response.status)
-                  );
-                }
-              });
-            })).then(function() {
-              return fuse;
-            });
-          });
-
-        } else {
-          return Promise.reject(
-            new Error('Unexpected status from search index request: ' +
-                        response.status)
-          );
-        }
-      });
-  }
-
-  window.document.addEventListener("DOMContentLoaded", function (event) {
-
-    // get search element (bail if we don't have one)
-    var searchEl = window.document.getElementById('distill-search');
-    if (!searchEl)
-      return;
-
-    createFuseIndex()
-      .then(function(fuse) {
-
-        // make search box visible
-        searchEl.classList.remove('hidden');
-
-        // initialize autocomplete
-        var options = {
-          autoselect: true,
-          hint: false,
-          minLength: 2,
-        };
-        window.autocomplete(searchEl, options, [{
-          source: function(query, callback) {
-            const searchOptions = {
-              isCaseSensitive: false,
-              shouldSort: true,
-              minMatchCharLength: 2,
-              limit: 10,
-            };
-            var results = fuse.search(query, searchOptions);
-            callback(results
-              .map(function(result) { return result.item; })
-            );
-          },
-          templates: {
-            suggestion: function(suggestion) {
-              var img = suggestion.preview && Object.keys(suggestion.preview).length > 0
-                ? `<img src="${offsetURL(suggestion.preview)}"</img>`
-                : '';
-              var html = `
-                <div class="search-item">
-                  <h3>${suggestion.title}</h3>
-                  <div class="search-item-description">
-                    ${suggestion.description || ''}
-                  </div>
-                  <div class="search-item-preview">
-                    ${img}
-                  </div>
-                </div>
-              `;
-              return html;
-            }
-          }
-        }]).on('autocomplete:selected', function(event, suggestion) {
-          window.location.href = offsetURL(suggestion.path);
-        });
-        // remove inline display style on autocompleter (we want to
-        // manage responsive display via css)
-        $('.algolia-autocomplete').css("display", "");
-      })
-      .catch(function(error) {
-        console.log(error);
-      });
-
-  });
-
-  </script>
-
-  <style type="text/css">
-
-  .nav-search {
-    font-size: x-small;
-  }
-
-  /* Algolioa Autocomplete */
-
-  .algolia-autocomplete {
-    display: inline-block;
-    margin-left: 10px;
-    vertical-align: sub;
-    background-color: white;
-    color: black;
-    padding: 6px;
-    padding-top: 8px;
-    padding-bottom: 0;
-    border-radius: 6px;
-    border: 1px #0F2E3D solid;
-    width: 180px;
-  }
-
-
-  @media screen and (max-width: 768px) {
-    .distill-site-nav .algolia-autocomplete {
-      display: none;
-      visibility: hidden;
-    }
-    .distill-site-nav.responsive .algolia-autocomplete {
-      display: inline-block;
-      visibility: visible;
-    }
-    .distill-site-nav.responsive .algolia-autocomplete .aa-dropdown-menu {
-      margin-left: 0;
-      width: 400px;
-      max-height: 400px;
-    }
-  }
-
-  .algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
-    width: 90%;
-    outline: none;
-    border: none;
-  }
-
-  .algolia-autocomplete .aa-hint {
-    color: #999;
-  }
-  .algolia-autocomplete .aa-dropdown-menu {
-    width: 550px;
-    max-height: 70vh;
-    overflow-x: visible;
-    overflow-y: scroll;
-    padding: 5px;
-    margin-top: 3px;
-    margin-left: -150px;
-    background-color: #fff;
-    border-radius: 5px;
-    border: 1px solid #999;
-    border-top: none;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
-    cursor: pointer;
-    padding: 5px 4px;
-    border-bottom: 1px solid #eee;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion:last-of-type {
-    border-bottom: none;
-    margin-bottom: 2px;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item {
-    overflow: hidden;
-    font-size: 0.8em;
-    line-height: 1.4em;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item h3 {
-    font-size: 1rem;
-    margin-block-start: 0;
-    margin-block-end: 5px;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-description {
-    display: inline-block;
-    overflow: hidden;
-    height: 2.8em;
-    width: 80%;
-    margin-right: 4%;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview {
-    display: inline-block;
-    width: 15%;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img {
-    height: 3em;
-    width: auto;
-    display: none;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img[src] {
-    display: initial;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
-    background-color: #eee;
-  }
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
-    font-weight: bold;
-    font-style: normal;
-  }
-
-  </style>
-
-
   <!--/radix_placeholder_navigation_in_header-->
   <!--radix_placeholder_distill-->
 
@@ -2043,288 +1445,19 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.13/header-attrs.js"></script>
-  <script src="site_libs/popper-2.6.0/popper.min.js"></script>
-  <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
-  <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
-  <script src="site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
-  <script src="site_libs/anchor-4.2.2/anchor.min.js"></script>
-  <script src="site_libs/bowser-1.9.3/bowser.min.js"></script>
-  <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
-  <script src="site_libs/distill-2.2.21/template.v2.js"></script>
+  <script src="nlmixr-at-wcop-2022_files/header-attrs-2.13/header-attrs.js"></script>
+  <script src="nlmixr-at-wcop-2022_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <script src="nlmixr-at-wcop-2022_files/popper-2.6.0/popper.min.js"></script>
+  <link href="nlmixr-at-wcop-2022_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="nlmixr-at-wcop-2022_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="nlmixr-at-wcop-2022_files/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="nlmixr-at-wcop-2022_files/anchor-4.2.2/anchor.min.js"></script>
+  <script src="nlmixr-at-wcop-2022_files/bowser-1.9.3/bowser.min.js"></script>
+  <script src="nlmixr-at-wcop-2022_files/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="nlmixr-at-wcop-2022_files/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
-  <script type="text/javascript" src="https://www.cookieconsent.com/releases/3.1.0/cookie-consent.js"></script>
-  <script type="text/javascript">
-  document.addEventListener('DOMContentLoaded', function () {
-  cookieconsent.run({
-  'notice_banner_type':'simple',
-  'consent_type': 'express',
-  'palette': 'light',
-  'language': 'en',
-  'website_name': 'Numetrics',
-  'cookies_policy_url': 'url',
-  'change_preferences_selector':'#CookiePreferences'
-  });});</script>
-  <script type="text/plain" cookie-consent="tracking" async src="https://www.googletagmanager.com/gtag/js?id=UA-212909047-1"></script>
-  <script type="text/plain" cookie-consent="tracking">
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-212909047-1');
-  </script>
-  <style type="text/css">
-  @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i|Asap:400,400i,700,700i|Roboto:400,400i,700,700i&display=swap');
-
-  d-article hr {
-  grid-column: screen;
-  width: 100%;
-  border: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  margin-top: 0px !important;
-  margin-bottom: 0px !important;
-  }
-
-  d-byline .byline {
-  grid-template-columns: 1fr 1fr;
-  grid-column: text;
-  heading-size: 0.6rem;
-  body-size: 0.6rem;
-  font-family: "Asap", "Asap", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  }
-
-  d-article > d-code, d-article section > d-code {
-  display: block;
-  overflow-x: scroll !important;
-  background: #f8f8f8 !important;
-  border: 1px solid #ccc !important;
-  border-radius: 1px !important;
-  text-shadow: 0 0px white !important;
-  font-family: "Operator Mono SSm A", "Operator Mono SSm B", Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-
-  }
-
-  .highcharts-background{
-    width: 100% !important;
-  }
-
-  .highcharts-plot-background{
-    width: 100% !important;
-  }
-
-
-  .highcharts-container{
-    width: 100% !important;
-  }
-
-  .highcharts-root{
-    width: 100% !important;
-  }
-
-  .posts-list .posts-list-caption {
-  grid-column: screen;
-  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-weight: 400;
-  color: #7d7d7d;
-  letter-spacing: 0px;
-  }
-
-  d-article h4 {
-  font-weight: 700;
-  text-transform: revert;
-  font-size: 15px;
-  line-height: 1.4em;
-  }
-
-  d-article a {
-  color: #00500c;
-  }
-
-  .distill-site-nav {
-    color: #ffffff;
-    font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    background: #00500c;
-    border-bottom: 2px solid #008001;
-    -webkit-box-shadow: 1px 1px 18px #00500c;
-    -moz-box-shadow: 1px 1px 18px #00500c;
-    box-shadow: 1px 1px 18px #00500c;
-  }
-
-  .distill-site-header {
-    font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    font-size: 16px;
-    /* margin-left: 20px;*/
-    font-weight: 600;
-    margin-right: 20px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-  }
-
-
-  .distill-site-nav .nav-right a:hover {
-  color: #ffffff !important;
-  background: #008001;
-  }
-
-
-  d-title {
-  padding-top: 5rem;
-  background: #fff;
-  font-family: "Asap", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-weight: 800;
-  color: #00500c;
-  }
-
-  d-title h1 {
-  font-weight: 800;
-  }
-
-  details {
-    background-color: hsla(206, 95%, 20%, 0.2);
-    cursor: pointer;
-    color: #2d2d2d;
-    margin-bottom:1vh;
-    padding: 1em;
-    border: none;
-    text-align: left;
-    outline: none;
-  }
-
-  .active, details:hover {
-    transition: max-height 0.2s ease-out;
-    /* background-color: #acc2c2; */
-  }
-
-  .d-contents {
-    --heading-size:    18px;
-    --contents-size:   13px;
-  }
-
-  details {
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
-    border-radius: 4px;
-  }
-
-  details.active {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-
-  summary::-webkit-details-marker {
-    display: none
-  }
-
-  summary::after {
-    float: right;
-    font-family: "Font Awesome 5 Free";
-    content: "\f0fe";
-  }
-
-  details[open] summary::after {
-    float: right;
-    font-family: "Font Awesome 5 Free";
-    content: "\f146";
-  }
-
-  details h4 {
-  margin: 0;
-  color: #2d2d2d !important;
-  line-height: inherit;
-  }
-
-  code {
-  color: #008001;
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace;
-  }
-
-  d-article {
-    color: #6B6D6F;
-  }
-
-  d-article h1 {
-      font-weight: 800;
-      color: #2d2d2d;
-      font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      letter-spacing: 0px !important;
-  }
-
-  ::selection {
-  color: #2d2d2d;
-  text-shadow: none;
-  background: rgba(222,207,64, 0.4);
-  }
-
-  .posts-list .metadata .publishedDate {
-  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  text-transform: uppercase;
-  font-size: 1rem;
-  letter-spacing: .9px;
-  color: #9d9d9d;
-  }
-
-  .posts-list .post-preview h2 {
-  color: #2d2d2d;
-  }
-
-  .posts-list .post-preview h2 {
-  font-size: 30px !important;
-  font-weight: 700 !important;
-  letter-spacing:0px !important;
-  font-family: "Asap", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
-  }
-
-  d-article h1 {
-  font-weight: 800;
-  color: #2d2d2d;
-  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
-  letter-spacing: 3px;
-  }
-
-  d-article h2 {
-  font-size: 24px;
-  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-weight: 600;
-  letter-spacing: 1px;
-  color: #008001;
-  border-bottom: 1.3px solid rgba(140, 143, 147, 0.5);
-  }
-
-  .highcharts-container text {
-  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif  !important;
-  }
-
-  body {
-      font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      font-weight: 400;
-      overflow-x: hidden;
-      overflow-y: auto
-  }
-
-  .posts-list .description h2, .posts-list .description p {
-      font-family: "Asap", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
-  }
-
-  .distill-site-nav a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .distill-site-nav a:hover {
-    color: white;
-  }
-
-  @media print {
-    .distill-site-nav {
-      display: none;
-    }
-  }
-  </style>
   <!--/radix_placeholder_site_in_header-->
 
-  <link rel="stylesheet" href="styles.css" type="text/css"/>
 
 </head>
 
@@ -2333,115 +1466,114 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"About this site","description":"This is primarily a blog for expressing my random thoughts, opinions, and the odd tutorial about R\nor pharmacometrics, but also serves as the de facto homepage for my company, Numetric GmbH, which is a member of Occams.","authors":[]}
+{"title":"nlmixr at WCoP 2022","description":"The nlmixr development team presented a nlmixr course in Cape Town, South Africa, for WCoP 2022. Here's how to get nlmixr up and running with the course materials.","authors":[{"author":"Justin Wilkins","authorURL":"https://www.occams.com","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2022-04-14T00:00:00.000+02:00","citationText":"Wilkins, 2022"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
 <!--radix_placeholder_navigation_before_body-->
-<header class="header header--fixed" role="banner">
-<nav class="distill-site-nav distill-site-header">
-<div class="nav-left">
-<a href="index.html" class="title">Numetrics</a>
-<input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
-</div>
-<div class="nav-right">
-<a href="index.html">Home</a>
-<a href="numetric.html">Numetric GmbH</a>
-<a href="about.html">About</a>
-<a href="https://github.com/kestrel99">
-<i class="fa fa-github" aria-hidden="true"></i>
-</a>
-<a href="https://twitter.com/justinwilkins">
-<i class="fa fa-twitter" aria-hidden="true"></i>
-</a>
-<a href="index.xml">
-<i class="fa fa-rss" aria-hidden="true"></i>
-</a>
-<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
-</div>
-</nav>
-</header>
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>About this site</h1>
+<h1>nlmixr at WCoP 2022</h1>
 <!--radix_placeholder_categories-->
+<div class="dt-tags">
+<div class="dt-tag">R</div>
+<div class="dt-tag">Docker</div>
+<div class="dt-tag">nlmixr</div>
+<div class="dt-tag">WCoP</div>
+</div>
 <!--/radix_placeholder_categories-->
-<p><p>This is primarily a blog for expressing my random thoughts,
-opinions, and the odd tutorial about R or pharmacometrics, but also
-serves as the de facto homepage for my company, Numetric GmbH, which is
-a member of Occams.</p></p>
+<p><p>The nlmixr development team presented a nlmixr course in Cape
+Town, South Africa, for WCoP 2022. Here’s how to get nlmixr up and
+running with the course materials.</p></p>
 </div>
 
+<div class="d-byline">
+  Justin Wilkins <a href="https://www.occams.com"
+class="uri">https://www.occams.com</a> 
+  
+<br/>2022-04-14
+</div>
 
 <div class="d-article">
-<h2 id="a-bit-about-me">A bit about me</h2>
-<p>I’m from Cape Town, one of the world’s sunnier places, and I have a
-PhD in pharmacology (my thesis was on the population pharmacokinetics of
-rifampicin, isoniazid, and pyrazinamide, key drugs in the treatment of
-tuberculosis) from the <a href="https://www.uct.ac.za">University of
-Cape Town</a> - I also collected a BSc in microbiology and biochemistry,
-and an MSc in the pharmacoeconomics of malaria while I was there (as you
-do).</p>
-<p>Since then, I’ve moved around a bit. I joined <a
-href="https://www.uu.se">Uppsala University</a> as a postdoctoral
-researcher in 2004, where I had the good fortune to work in the storied
-Department of Pharmaceutical Biosciences, one of the world’s foremost
-centers of pharmacometrics, and then to Switzerland in 2006, to join <a
-href="https://www.novartis.com">Novartis</a>.</p>
-<p>In 2010, I joined Exprimo, a pharmacometrics consulting company of
-some renown. Sadly, it was acquired by a multinational logistics company
-soon after, which ran it into the ground. Everyone left, and today, it
-no longer exists. On the bright side, this catastrophe gave some
-colleagues and I the push we needed to set up shop for ourselves, and in
-2015, we formed <a href="https://www.occams.com">Occams</a>. My family
-and I moved to Germany in 2019, where we remain today.</p>
-<p>I’m a pharmacometrics consultant in my day job. I build
-pharmacokinetic (PK), pharmacodynamic (PD) and PK-PD models for drugs,
-based on clinical trial data; these models can be used to explain and
-predict changes in drug concentration over time, given a specific dose,
-and how those concentrations relate to the drug’s effects (both positive
-and negative). I’ve worked on drugs in infectious diseases, oncology,
-diabetes, and respiratory disease, amongst others - you can find a more
-detailed record of what I’ve been up to <a
-href="https://scholar.google.com/citations?user=p8gEvroAAAAJ&amp;hl=en">here</a>.</p>
-<p>I try to keep active in the greater pharmacometrics community. I was
-elected to the Board of Directors of the <a
-href="https://www.go-isop.org">International Society of Pharmacometrics
-(ISoP)</a> in 2016, and served as its President in 2019. My term ended
-at the end of 2021, and I’m pretty proud of what my ISoP colleagues and
-I managed to achieve while there. I’m currently part of the logistics
-team at <a href="https://www.page-meeting.org">PAGE</a>, sit on its
-Student Sponsorship committee, and have been on its Scientific
-Organizing Committee since 2013. I was the Novartis representative on
-the <a href="https://www.ddmore.foundation/">DDMoRe</a> project, served
-briefly as its Scientific Director, and co-led the team that developed
-the <a href="https://www.ddmore.foundation/thoughtflow/">Thoughtflow</a>
-concept. The success of DDMoRe is up for debate, but I’m firmly of the
-opinion that did some useful things (if only more people agreed).</p>
-<p>As well as being a full-time pharmacometrics consultant in my day
-job, I dabble occasionally in tool development and I’m a big fan of
-reproducibility in research. <a
-href="https://github.com/kestrel99/Census">Census</a> was my attempt at
-a run management tool for NONMEM, but it has fallen into disuse over the
-past few years (moral of the story - if you want to build a community
-around an open source tool, don’t develop it in Object Pascal). I helped
-port <a
-href="https://uupharmacometrics.github.io/xpose4/reference/xpose4-package.html">xpose4</a>
-from S-PLUS to R while at Uppsala, I maintain the <a
-href="https://github.com/kestrel99/pmxTools">pmxTools</a> package for R,
-and I’m on the <a href="https://github.com/nlmixr2/nlmixr2">nlmixr</a>
-development team (everyone should use nlmixr, it’s great).</p>
-<p>I’m on <a href="https://github.com/kestrel99">GitHub</a>. On social
-media, I can be found on <a
-href="https://www.twitter.com/justinwilkins">Twitter</a> and <a
-href="https://www.linkedin.com/in/justinjwilkins/">LinkedIn</a> (where I
-mostly just lurk).</p>
-<p>This blog occasionally pops up at <a
-href="https://rweekly.org">RWeekly.org</a>.</p>
+<h2 id="wcop-in-cape-town">WCoP in Cape Town</h2>
+<p>After a two-year delay thanks to the ongoing COVID-19 pandemic, we
+finally got to do <a href="https://www.wcop2022.org">WCoP in Cape
+Town</a>. It was so worth the wait.</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="../../assets/wcop1.jpg" width="45%" height="45%" style="border:5px solid white;" /><img src="../../assets/wcop2.jpg" width="45%" height="45%" style="border:5px solid white;" /><img src="../../assets/wcop3.jpg" width="45%" height="45%" style="border:5px solid white;" /><img src="../../assets/wcop4.jpg" width="45%" height="45%" style="border:5px solid white;" /></p>
+</div>
+<h2 id="nlmixr-at-wcop"><code>nlmixr</code> at WCoP</h2>
+<p>We had a half-day course just before the conference proper, set up as
+an introduction to <code>nlmixr</code> as well as to adjacent
+pharmacometrics packages <a
+href="https://github.com/ggPMXdevelopment/ggPMX"><code>ggPMX</code></a>
+and <a href="https://github.com/Novartis/xgxr"><code>xgxr</code></a>.
+Rik and I were in the room, but the course material itself was presented
+by Irina Baltcheva, Bruno Bieth, Matt Fidler and Fariba Khanshan as
+prerecorded video, since none of them were able to join us owing to
+ongoing travel restrictions. Let’s chalk it up as a learning experience,
+but a hybrid session like this is not something we’d want to do
+again.</p>
+<p>But! The material, as ever, was great. You can watch the videos
+here:</p>
+<ul>
+<li><a
+href="https://www.youtube.com/watch?v=VqzVdV0NcR0"><code>nlmixr</code>:
+Multiple endpoints</a></li>
+<li><a
+href="https://www.youtube.com/watch?v=SgIc6bkGQCY"><code>nlmixr</code>:
+Piping</a></li>
+<li><a
+href="https://www.youtube.com/watch?v=_hxdonlgps8"><code>nlmixr</code>:
+Phenobarbital</a></li>
+<li><a
+href="https://www.youtube.com/watch?v=qJkF7RWRwLU"><code>xgxr</code>
+tutorial</a></li>
+<li><a
+href="https://www.youtube.com/watch?v=bDS_iGc9VyQ"><code>ggPMX</code>
+tutorial</a></li>
+<li><a href="https://www.youtube.com/watch?v=phhsh8R_sYQ">Integrated
+demo of <code>nlmixr</code>, <code>xgxr</code> and
+<code>ggPMX</code></a></li>
+</ul>
+<p>As discussed in a <a
+href="../2021-11-14-nlmixr-docked-and-loaded/">previous blog post</a>,
+<code>nlmixr</code> really lends itself to being Dockerized. So we’ve
+put together a <a href="https://www.docker.com">Docker</a> image with
+the latest versions of <code>nlmixr</code>, <code>xgxr</code> and
+<code>ggPMX</code> and all their support packages, the latest version of
+<a
+href="https://www.rstudio.com/products/rstudio/#rstudio-server">RStudio
+Server</a> and all the trimmings. As before, you’ll need to enter this
+at the terminal prompt:</p>
+<div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> pull kestrel99/nlmixr:wcop2022</span></code></pre></div>
+</div>
+<p>(Note the <code>wcop2022</code> tag, which will get you the version
+with the course material.)</p>
+<p>Now run it (all one line):</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> container run <span class="at">--rm</span> <span class="at">-it</span> <span class="at">-e</span> PASSWORD=mypass <span class="at">-p</span> 8787:8787 </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>      <span class="ex">-v</span> /c/MyProject:/home/rstudio/myproject kestrel99/nlmixr:wcop2022</span></code></pre></div>
+</div>
+<p>This will load the image, which you can access through any web
+browser at <a href="http://localhost:8787"
+class="uri">http://localhost:8787</a>. The password will be
+<em>mypass</em>, but you can set this to anything you like at startup.
+The <code>/c/MyProject</code> part of the command refers to a local
+folder (if you’re on Windows, this points to <code>C:\MyProject</code>)
+that will be made available to the image so that you can share files
+with it.</p>
+<p>Enjoy, and let us know if you run into any issues with it! We have a
+variety of <code>nlmixr</code> images at <a
+href="https://hub.docker.com/repository/docker/kestrel99/nlmixr">Docker
+Hub</a>.</p>
+<div class="sourceCode" id="cb3"><pre
 class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
@@ -2455,8 +1587,8 @@ class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"><
 <!--/radix_placeholder_site_after_body-->
 <!--radix_placeholder_appendices-->
 <div class="appendix-bottom">
-<h3 id="updates-and-corrections">Corrections</h3>
-<p>If you see mistakes or want to suggest changes, please <a href="https://github.com/kestrel99/numetric.ai/issues/new">create an issue</a> on the source repository.</p>
+<h3 id="references">References</h3>
+<div id="references-listing"></div>
 </div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->

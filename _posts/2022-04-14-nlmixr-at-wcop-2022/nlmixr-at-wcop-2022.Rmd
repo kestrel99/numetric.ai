@@ -1,0 +1,66 @@
+---
+title: "nlmixr at WCoP 2022"
+description: |
+  The nlmixr development team presented a nlmixr course in Cape Town, South Africa, for WCoP 2022. Here's how to get nlmixr up and running with the course materials.
+author:
+  - name: Justin Wilkins
+    url: https://www.occams.com
+date: 2022-04-14
+output:
+  distill::distill_article:
+    self_contained: false
+bibliography: biblio.bib
+csl: elsevier-vancouver.csl
+categories:
+  - R
+  - Docker
+  - nlmixr
+  - WCoP
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## WCoP in Cape Town
+
+After a two-year delay thanks to the ongoing COVID-19 pandemic, we finally got to do [WCoP in Cape Town](https://www.wcop2022.org). It was so worth the wait.
+
+```{r, echo=FALSE, out.width="45%", out.height="45%", out.extra = 'style="border:5px solid white;"'}
+knitr::include_graphics(c("../../assets/wcop1.jpg","../../assets/wcop2.jpg","../../assets/wcop3.jpg","../../assets/wcop4.jpg"))
+```
+
+## `nlmixr` at WCoP
+
+We had a half-day course just before the conference proper, set up as an introduction to `nlmixr` as well as to adjacent pharmacometrics packages [`ggPMX`](https://github.com/ggPMXdevelopment/ggPMX) and [`xgxr`](https://github.com/Novartis/xgxr). Rik and I were in the room, but the course material itself was presented by Irina Baltcheva, Bruno Bieth, Matt Fidler and Fariba Khanshan as prerecorded video, since none of them were able to join us owing to ongoing travel restrictions. Let's chalk it up as a learning experience, but a hybrid session like this is not something we'd want to do again.
+
+But! The material, as ever, was great. You can watch the videos here:
+
+-   [`nlmixr`: Multiple endpoints](https://www.youtube.com/watch?v=VqzVdV0NcR0)
+-   [`nlmixr`: Piping](https://www.youtube.com/watch?v=SgIc6bkGQCY)
+-   [`nlmixr`: Phenobarbital](https://www.youtube.com/watch?v=_hxdonlgps8)
+-   [`xgxr` tutorial](https://www.youtube.com/watch?v=qJkF7RWRwLU)
+-   [`ggPMX` tutorial](https://www.youtube.com/watch?v=bDS_iGc9VyQ)
+-   [Integrated demo of `nlmixr`, `xgxr` and `ggPMX`](https://www.youtube.com/watch?v=phhsh8R_sYQ)
+
+As discussed in a [previous blog post](../2021-11-14-nlmixr-docked-and-loaded/), `nlmixr` really lends itself to being Dockerized. So we've put together a [Docker](https://www.docker.com) image with the latest versions of `nlmixr`, `xgxr` and `ggPMX` and all their support packages, the latest version of [RStudio Server](https://www.rstudio.com/products/rstudio/#rstudio-server) and all the trimmings. As before, you'll need to enter this at the terminal prompt:
+
+```{bash, eval=F, echo=T}
+docker pull kestrel99/nlmixr:wcop2022
+
+```
+
+(Note the `wcop2022` tag, which will get you the version with the course material.)
+
+Now run it (all one line):
+
+```{bash, eval=F, echo=T}
+docker container run --rm -it -e PASSWORD=mypass -p 8787:8787 
+      -v /c/MyProject:/home/rstudio/myproject kestrel99/nlmixr:wcop2022
+```
+
+This will load the image, which you can access through any web browser at <http://localhost:8787>. The password will be *mypass*, but you can set this to anything you like at startup. The `/c/MyProject` part of the command refers to a local folder (if you're on Windows, this points to `C:\MyProject`) that will be made available to the image so that you can share files with it.
+
+Enjoy, and let us know if you run into any issues with it! We have a variety of `nlmixr` images at [Docker Hub](https://hub.docker.com/repository/docker/kestrel99/nlmixr).
+
+

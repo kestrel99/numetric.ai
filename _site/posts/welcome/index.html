@@ -1882,6 +1882,12 @@ function init_distill() {
 
     // hoverable references
     $('span.citation[data-cites]').each(function() {
+      if ($(this).children()[0].nodeName == "D-FOOTNOTE") {
+        var fn = $(this).children()[0]
+        $(this).html(fn.shadowRoot.querySelector("sup"))
+        $(this).id = fn.id
+        fn.remove()
+      }
       var refs = $(this).attr('data-cites').split(" ");
       var refHtml = refs.map(function(ref) {
         return "<p>" + $('#ref-' + ref).html() + "</p>";
@@ -2410,14 +2416,14 @@ body {
     </span>
     <span class="article-sharing">
       Share: &nbsp;
-      <a href="https://twitter.com/share?text=Welcome%20to%20Numetrics&amp;url=https%3A%2F%2Fnumetric.ai%2Fposts%2Fwelcome%2F">
-        <i class="fab fa-twitter"></i>
+      <a href="https://twitter.com/share?text=Welcome%20to%20Numetrics&amp;url=https%3A%2F%2Fnumetric.ai%2Fposts%2Fwelcome%2F" aria-label="share on twitter">
+        <i class="fab fa-twitter" aria-hidden="true"></i>
       </a>
-      <a href="https://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=https%3A%2F%2Fnumetric.ai%2Fposts%2Fwelcome%2F">
-        <i class="fab fa-facebook"></i>
+      <a href="https://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=https%3A%2F%2Fnumetric.ai%2Fposts%2Fwelcome%2F" aria-label="share on facebook">
+        <i class="fab fa-facebook" aria-hidden="true"></i>
       </a>
-      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fnumetric.ai%2Fposts%2Fwelcome%2F&amp;title=Welcome%20to%20Numetrics">
-        <i class="fab fa-linkedin"></i>
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fnumetric.ai%2Fposts%2Fwelcome%2F&amp;title=Welcome%20to%20Numetrics" aria-label="share on linkedin">
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
       </a>
     </span>
   </p>
