@@ -1,0 +1,98 @@
+---
+title: "Gathering momentum"
+description: |
+  `nlmixr` sightings in the wild.
+author:
+  - name: Justin Wilkins
+    url: https://www.occams.com
+date: 2022-04-28
+output:
+  distill::distill_article:
+    self_contained: false
+bibliography: biblio.bib
+csl: elsevier-vancouver.csl
+categories:
+  - R
+  - nlmixr
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Keeping tabs
+
+Tracking the adoption of tools is a tricky business. How do we know how many people are using our tool? How do we know whether they keep using it, or abandon it in disgust after running into problems they can't solve within the deadlines they have, or because of limitations within the tool itself? Obviously there aren't easy answers to this.
+
+The `nlmixr` project has been running for a good few years now, and if we may say so, has gone from strength to strength, especially when one considers that it's a completely volunteer-led endeavour - although our various employers (most notably Novartis, but also Avrobio, Human Predictions, Johnson & Johnson, LAP&P, Occams and Seattle Genetics, and others) have allowed us to use company time to work on it, at the end of the day everyone involved is working on it for purely philanthropic reasons. We do it because we enjoy doing it, and because it's good for our community (although, to be fair, the idea of having a capable pharmacometric modeling tool that doesn't cost hundreds of thousands of dollars a year may explain why our companies are so enthusiastic about us working on `nlmixr` - especially true if you're a small consultancy like Occams).
+
+## Who's using `nlmixr`?
+
+So. How to judge real-world impact? Maybe a good place to start is by looking at peer-reviewed journal articles that cite it. But cite what? `nlmixr` is a tool, and citing tools is notoriously inconsistent in the scientific literature. For the purposes of this post, I've trawled through [Google Scholar](https://scholar.google.com/), checking the citations database for our three main publications [@Fidler2019;@Schoemaker2019;@Fidler2021], articles mentioning `nlmixr`, available abstracts at [PAGE](https://www.page-meeting.org), [ACoP](https://www.go-acop.org) (although getting at these was challenging), [WCoP](https://www.go-wcop.org) and [PAGANZ](https://www.paganz.org), [PubMed](https://pubmed.ncbi.nlm.nih.gov/), and [ResearchGate](https://www.researchgate.com). Finally, I did a naive Google search to see if there were any we missed. This was by no means an exhaustive literature search, and since I don't have the required level of access to [Web of Science](https://webofknowledge.com) or [Scopus](https://www.scopus.com/), those were skipped.
+
+## So what did we find?
+
+Quite a lot, actually!
+
+### Population PK
+
+The simplest use case for `nlmixr` is population pharmacokinetic (PK) modeling. 
+
+Kelliny and colleagues used `nlmixr` to model the PK of p75ECD-Fc, a novel antagonist of toxic amyloid beta protein and other neurodegenerative factors which is being evaluated for the treatment of Alzheimer’s disease, in serum and tissue in Sprague-Dawley rats [@Kelliny2021]. Cope and colleagues applied `nlmixr` to explore the PK differences between different formulations of tacrolimus in paediatric renal transplant recipients [@Cope2021]. 
+
+
+
+### Oncology
+
+nlmixr has been applied in several ways in oncology. 
+
+* Lombard and colleagues investigated the effect of docetaxel on first-cycle neutrophil count as a marker of response in a non-small cell lung cancer (NSCLC) patient population, with a view to dose individualisation [@Lombard2021].
+* A team of researchers from Óbuda University have used nlmixr to explore models of tumor growth [@Drexler2019;@Drexler2019a;@Drexler2019b;@Kovacs2020;@Puskas2021].
+* Pharmacokinetic-pharmacodynamic (PK-PD) modeling of leukocyte dynamics and lymph node size was performed in chronic lymphocytic leukaemia (CLL) patients treated with ibrutinib [@Ibrahim2021]. 
+* Voulgarelis and colleagues compared a series of seven tumour growth models for patient-derived and cell line-derived xenografts, using bootstrapping to explore which approach was the most appropriate in this context (it turned out to be the Gompertz model for their data) [@Voulgarelis2022]. 
+* Medhora et al applied nlmixr to fit a 2-compartmental PK model for lisinopril (including urine data), and used it to investigate the effects of radiation on drug bioavailability in rats [@Medhora2021].  
+
+### Infectious diseases
+
+- Allele-specific collateral and fitness effects determine the dynamics of fluoroquinolone-resistance evolution [preprint] [@Liakopoulos2020]
+- Model-based design of innovative treatment strategies to suppress antimicrobial resistance using collateral sensitivity [@Aulin2021]
+- Modelling rate and extent of resistance development against colistin in Klebsiella pneumoniae [@Pham2021]
+- Power calculations for cluster randomized trials (CRTs) with right-truncated Poisson-distributed outcomes: a motivating example from a malaria vector control trial [@Mwandigha2020]
+- TB-PRACTECAL [@Nyangwa2021]
+
+### QSP
+
+- QSP [@Sokolov2018;@Helmlinger2019;@Vavilov2021;@Aghamiri2022]
+- Quantitative Systems Pharmacology Modeling Framework of Autophagy in Tuberculosis: Application to Adjunctive Metformin Host-Directed Therapy [preprint] [@Mehta2022]
+
+### Online databases
+
+- Model-based  analysis of data in the SwissPKcdw project [@Goers2021;@Paioni2021]
+- Web based platform for clinical pharmacokinetic consultation service (CPCS) with Non-linear Mixed Effect Model [@Jung2021]
+- Overview of Korean Pharmacometrics Modeling Library and web-based pharmacometrics platform [@Tran2021]
+
+
+
+
+
+- Pharmacometric estimation methods for aggregate data, including data simulated from other pharmacometric models [@Valitalo2021]
+
+
+
+- The Non-Steroidal Mineralocorticoid Receptor Antagonist KBP-5074 Limits Albuminuria and has Improved Therapeutic Index Compared With Eplerenone in a Rat Model With Mineralocorticoid-Induced Renal Injury [@Jaisser2021]
+
+
+
+- Bayesian knowledge integration for an in vitro–in vivo correlation model [@Erhardt2019]
+- Exploration and application of a liver-on-a-chip device in combination with modelling and simulation for quantitative drug metabolism studies [@Docci2022]
+
+### Mentioned in passing
+
+- Mentioned in passing [@Olafsdottir2018;@Nemeth2020;@Sverdlov2020;@Xu2020;@Leander2021;@LeLouedec2021;@Lu2021;@Frank2021;@Comets2021;@Kim2021;@Peng2021;@Guidi2022;@Goutelle2022;@Lee2022;@Soeorg2022]
+
+### Assessment in comparison to other tools
+
+Erhardt and colleagues compared `nlmixr` with Monolix in terms of their respective abilities to estimate the parameters of a three-compartment IV PK model, and concluded that `nlmixr` performed just as well if not better, supporting our own findings [@Erhardt2017;@Schoemaker2019]. A more recent preprint publication by Mak and colleagues evaluated `nlmixr`'s SAEM, FOCE and FOCEI estimation algorithms using a 1-compartment model for metformin (including a transit absorption model) and reported that `nlmixr` worked well, even in the presence of flip-flop PK, with SAEM providing marginally superior results [@Mak2021].
+
+
